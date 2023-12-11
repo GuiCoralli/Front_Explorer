@@ -102,11 +102,11 @@ ________________________________________________________________________________
 
 ### Prerequisites:
 	Install the following tools on your machine:
-*[Git](https://git-scm.com);
-*[Node.js](https://nodejs.org/en/).
+- [x] [Git](https://git-scm.com)
+- [x] [Node.js](https://nodejs.org/en/)
 
 It is important to have an editor to work with the code, such as:
-*[VSCode](https://code.visualstudio.com/).
+- [x] [VSCode](https://code.visualstudio.com/)
 <br/>
 
 
