@@ -1,19 +1,54 @@
 Colocar uma imagem[logo]
+
 colocar um gif (mostrando a página, o app como um todo)
 
+<h1 align="center">Food Explorer</h1> 
+
+
+
 <p align="center">
-	  <img alt="Project status" src="https://img.shields.io/badge/Status-Em construção-orange">
-	  <img alt="GitHub last commit (by committer)" src="https://img.shields.io/github/last-commit/">
-	  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/">
-	  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/>
+	  <img alt="Project status" src="https://img.shields.io/badge/Status-Finalizado-green">
+	  <img alt="GitHub last commit (by committer)" src="https://img.shields.io/github/last-commit/GuiCoralli/frontend-FoodExplorer">
+	  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/GuiCoralli/frontend-FoodExplorer">
+	  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/GuiCoralli/frontend-FoodExplorer?style=social">
 </p>
+
+
+
+<p align="center">
+Este projeto de conclusão de curso, da plataforma educacional Rocketseat, simula um cardápio digital para um restaurante, feito pela GuiCoralli para consolidar o aprendizado de tecnologias de aplicações WEB.
+</p>
+
+
+<p align="center">
+  <a href="#-Sobre o Projeto:">Sobre o Projeto:</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Acesse o Food Explorer">Acesse o Food Explorer</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Funcionalidades:">Funcionalidades:</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Características:">Características:</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Como rodar o projeto">Como rodar o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Running the Front End">Running the Front End</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Running the Back End (server)">Running the Back End (server)</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
+
+
+ ## Tradução 
+ <p align="center">
+   ·
+  <a href="https://github.com/GuiCoralli/frontend-FoodExplorer/blob/main/README-PT_BR.md"> Português
+  ·
+  <a href="https://github.com/GuiCoralli/frontend-FoodExplorer/blob/main/README.md"> English
+  </a>
+
+_____________________________________________________________________________________
+
 
 # 📄 Sobre o Projeto:
 	Descubra o FoodExplorer, uma aplicação web que reune o melhor da culinária e programação. Este projeto final de curso, da plataforma educacional da Rocketseat, simula um cardápio digital para um restaurante. 
 	O FoodExplorer é uma ótima experiência que converge de maneira criativa entre duas áreas distintas como a gastronomia e tecnologia.
 <br /><br />
 
-# 🚀 Acesse o Food Explorer
+# 📌 Acesse o Food Explorer
 [Colocar o endereço deploy do frontend]
 https://
 <br /><br />
@@ -33,7 +68,8 @@ https://
 - [x] Modo claro/escuro
 <br /><br />
 
-# 📌 Projeto desenvolvido com as seguintes tecnologias:
+# 🚀 Tecnologias
+##   Projeto desenvolvido com as seguintes tecnologias:
 
   <div>
  <img align="center" alt="Gui-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
