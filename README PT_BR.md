@@ -1,5 +1,4 @@
 Colocar uma imagem[logo]
-
 colocar um gif (mostrando a página, o app como um todo)
 
 <p align="center">
@@ -9,32 +8,32 @@ colocar um gif (mostrando a página, o app como um todo)
 	  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/>
 </p>
 
-# 📄 About the Project:
-	Discover FoodExplorer, a web application that brings together the best of cooking and programming. This final course project, from the Rocketseat educational platform, simulates a digital menu for a restaurant. 
-	FoodExplorer is a great experience that creatively converges between two distinct areas such as gastronomy and technology.
+# 📄 Sobre o Projeto:
+	Descubra o FoodExplorer, uma aplicação web que reune o melhor da culinária e programação. Este projeto final de curso, da plataforma educacional da Rocketseat, simula um cardápio digital para um restaurante. 
+	O FoodExplorer é uma ótima experiência que converge de maneira criativa entre duas áreas distintas como a gastronomia e tecnologia.
 <br /><br />
 
-# 🚀 Access Food Explorer
+# 🚀 Acesse o Food Explorer
 [Colocar o endereço deploy do frontend]
 https://
 <br /><br />
 
-# ✅ Functionalities:
-- [x] Administrator and user registration
-- [x] Registration, editing and deletion of products (administrator)
-- [x] Product consultation
-- [x] Placing orders (user)
-- [x] Payment simulation (user)
-- [x] Order consultation
-- [x] Changing the status of orders (administrator)
+# ✅ Funcionalidades:
+- [x] Cadastro de administrador e usuários
+- [x] Cadastro, edição e exclusão de produtos (administrador)
+- [x] Consulta de produtos
+- [x] Realização de pedidos (usuário)
+- [x] Simulação de pagamento (usuário)
+- [x] Consulta de pedidos
+- [x] Alteração do status dos pedidos (administrador)
 <br /><br />
 
 # 🔨 Características:
-- [x] Responsiveness
-- [x] Light/dark mode
+- [x] Responsividade
+- [x] Modo claro/escuro
 <br /><br />
 
-# 📌 Project developed with the following technologies:
+# 📌 Projeto desenvolvido com as seguintes tecnologias:
 
   <div>
  <img align="center" alt="Gui-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
@@ -44,7 +43,7 @@ https://
  <img align="center" alt="Gui-REACT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/react.js-original.svg">
  </div>
 
-# 🖼️ Images
+# 🖼️ Imagens
 
 <div align="center">
 	<img src="https://i.ibb.co/pLDmkcs/screenshot-01.jpg" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
@@ -66,78 +65,80 @@ https://
 
 <br /><br />
 
-# 💻 How to run the project
+# 💻 Como rodar o projeto
 
-### Prerequisites:
-Install the following tools on your machine:
+### Pré-requisitos:
+Instalar em sua máquina as seguintes ferramentas:
 ** [Git](https://git-scm.com);
 ** [Node.js](https://nodejs.org/en/).
 
-It is important to have an editor to work with the code, such as:
+Ter um editor para trabalhar com o código, como por exemplo:
 ***[VSCode](https://code.visualstudio.com/).
+
 <br />
 
 
-## 🎲 Running the Front End
+## 🎲 Rodando o Front End
 
-Clone the repository by writing the following command line in the Vscode terminal:
+Clone o repositório:
 ```
 git clone https://github.com/GuiCoralli/frontend-FoodExplorer.git
 ```
 
-Access the project folder in terminal/cmd:
+Acesse a pasta do projeto no terminal/cmd:
 ```
 cd frontend-food-explorer
 ```
 
-Install dependencies:
+Instale as dependências:
 ```
 npm install
 ```
 
-Run the application in development mode:
+Execute a aplicação em modo de desenvolvimento:
 ```
 npm run dev
 ```
 
-The default port for the Front End is 5173 - access <http://localhost:5173>
+A porta padrão para o Front End é 5173 - acesse <http://localhost:5173>
 <br /><br />
 
 
-### 🎲 Running the Back End (server)
+### 🎲 Rodando o Back End (servidor)
 
-Clone the repository by writing the following command line in the Vscode terminal:
+Clone o repositório:
 ```
 git clone https://github.com/GuiCoralli/backend-FoodExplorer.git
 ```
 
-Access the project folder in terminal/cmd:
+Acesse a pasta do projeto no terminal/cmd:
 ```
 cd backend-food-explorer
 ```
 
-Install dependencies:
+Instale as dependências:
 ```
 npm install
 ```
 
-Run the application in development mode:
+Execute a aplicação em modo de desenvolvimento:
 ```
 npm run dev
 ```
 
-Server will start on port:3333 - access <http://localhost:3333>
+O servidor inciará na porta:3333 - acesse <http://localhost:3333>
 
 <br />
 
 
-### Author
+### Autor
 ---
+
 <a href="https://github.com/GuiCoralli?tab=repositories">
  <img style="border-radius: 50%;" src="https://github.com/GuiCoralli.png" width="100px;" alt="Imagem de GuiCoralli"/>
  <br /> <sub><b>Guilherme Coralli</b></sub></a>
 
 
-💡 Created by Guilherme Coralli. 👋🏽 Get in touch!
+💡 Criado por Guilherme Coralli. 👋🏽 Entre em contato!
 
 [![Linkedin Badge](https://img.shields.io/badge/LinkedIn-0077B5?logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/guicoralli/)](https://www.linkedin.com/in/guicoralli/) 
