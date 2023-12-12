@@ -68,7 +68,7 @@ ________________________________________________________________________________
 # 📌 Access Food Explorer
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ee934639-600d-452f-9719-0096228d3430/deploy-status)](https://app.netlify.com/sites/foodexplorercoralli/deploys)
 <div>
-	👉🏼 https://corallifoodexplorer.netlify.app/
+	👉🏼 
 </div>
 
 # ✅ Functionalities:
