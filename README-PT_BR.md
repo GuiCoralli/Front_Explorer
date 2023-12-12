@@ -105,11 +105,11 @@ ________________________________________________________________________________
 
 ### Pré-requisitos:
 Instalar em sua máquina as seguintes ferramentas:
-- [x] [Git](https://git-scm.com);
-- [x] [Node.js](https://nodejs.org/en/).
+- [x] [Git](https://git-scm.com)
+- [x] [Node.js](https://nodejs.org/en/)
 
 Ter um editor para trabalhar com o código, como por exemplo:
-- [x] [VSCode](https://code.visualstudio.com/).
+- [x] [VSCode](https://code.visualstudio.com/)
 
 <br />
 
@@ -175,6 +175,7 @@ O servidor inciará na porta:3333 - acesse <http://localhost:3333>
  <br /> <sub><b>Guilherme Coralli</b></sub></a>
 
 
-💡 Criado por Guilherme Coralli. 👋🏽 Entre em contato!
+💡 Criado por Guilherme Coralli. 
 
+👋🏽 Entre em contato!
 [![Linkedin Badge](https://img.shields.io/badge/LinkedIn-0077B5?logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/guicoralli/)](https://www.linkedin.com/in/guicoralli/) 
