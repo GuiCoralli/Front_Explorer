@@ -168,6 +168,7 @@ Server will start on port:3333 - access <http://localhost:3333>
  <br /> <sub><b>Guilherme Coralli</b></sub></a>
 
 
-💡 Created by Guilherme Coralli. 👋🏽 Get in touch!
+💡 Created by Guilherme Coralli. 
 
+👋🏽 Get in touch!
 [![Linkedin Badge](https://img.shields.io/badge/LinkedIn-0077B5?logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/guicoralli/)](https://www.linkedin.com/in/guicoralli/) 
