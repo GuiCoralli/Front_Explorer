@@ -16,7 +16,7 @@
 
 
 <p align="center">
-Este projeto de conclusão de curso, da plataforma educacional Rocketseat, simula um cardápio digital para um restaurante, feito pela GuiCoralli para consolidar o aprendizado de tecnologias de aplicações WEB.
+Este projeto de conclusão de curso, da plataforma educacional Rocketseat, simula um cardápio digital para um restaurante, feito por GuiCoralli para consolidar o aprendizado de tecnologias de aplicações WEB.
 </p>
 
 
