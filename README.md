@@ -20,13 +20,13 @@ This is final course project, from the Rocketseat educational platform, simulate
 </p>
 
 <p align="center">
-  <a href="#-About the Project:">About the Project:</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-About the Project">About the Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Access Food Explorer">Access Food Explorer</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Functionalities:">Functionalities:</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Characteristics">Characteristics:</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Functionalities">Functionalities</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Characteristics">Characteristics</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-How to run the project">How to run the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Running the Front End">Running the Front End</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-How to run the project">How to run the project</a><br>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Running the Front End">Running the Front End </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Running the Back End (server)">Running the Back End (server)</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
@@ -42,40 +42,40 @@ This is final course project, from the Rocketseat educational platform, simulate
 _____________________________________________________________________________________
 
 # 📄 About the Project:
+<div>
 	Discover FoodExplorer, a web application that brings together the best of cooking and programming. This final course project, from the Rocketseat educational platform, simulates a digital menu for a restaurant. 
 	FoodExplorer is a great experience that creatively converges between two distinct areas such as gastronomy and technology.
-<br /><br />
+</div>
 
 # 📌 Access Food Explorer
-	[Colocar o endereço deploy do frontend]
-	https://
-<br /><br />
+<div>
+	https:// [Colocar o endereço deploy do frontend]
+</div>
 
 # ✅ Functionalities:
-	- [x] Administrator and user registration
-	- [x] Registration, editing and deletion of products (administrator)
-	- [x] Product consultation
-	- [x] Placing orders (user)
-	- [x] Payment simulation (user)
-	- [x] Order consultation
-	- [x] Changing the status of orders (administrator)
+- [x] Administrator and user registration
+- [x] Registration, editing and deletion of products (administrator)
+- [x] Product consultation
+- [x] Placing orders (user)
+- [x] Payment simulation (user)
+- [x] Order consultation
+- [x] Changing the status of orders (administrator)
 <br /><br />
 
 # 🔨 Characteristics:
-	- [x] Responsiveness
-	- [x] Light/dark mode
+- [x] Responsiveness
+- [x] Light/dark mode
 <br /><br />
 
 # 🚀 Technologies
 ## Project developed with the following technologies:
-
-  <div>
- <img align="center" alt="Gui-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
- <img align="center" alt="Gui-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
- <img align="center" alt="Gui-JAVASCRIPT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
- <img align="center" alt="Gui-NODE" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/Node.js-original.svg">
- <img align="center" alt="Gui-REACT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/react.js-original.svg">
- </div>
+<div>
+	<img align="center" alt="Gui-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+ 	<img align="center" alt="Gui-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+ 	<img align="center" alt="Gui-JAVASCRIPT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
+ 	<img align="center" alt="Gui-NODE" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
+ 	<img align="center" alt="Gui-REACT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+</div>
 
 # 🖼️ Images
 
@@ -96,19 +96,18 @@ ________________________________________________________________________________
 	<img src="https://i.ibb.co/LPZTxck/screenshot-12.png" alt="" width="100px" />
 	<img src="https://i.ibb.co/7QxfPpq/screenshot-13.png" alt="" width="100px" />
 </div>
-
 <br /><br />
 
 # 💻 How to run the project
 
 ### Prerequisites:
 	Install the following tools on your machine:
-** [Git](https://git-scm.com);
-** [Node.js](https://nodejs.org/en/).
+*[Git](https://git-scm.com);
+*[Node.js](https://nodejs.org/en/).
 
 It is important to have an editor to work with the code, such as:
-***[VSCode](https://code.visualstudio.com/).
-<br />
+*[VSCode](https://code.visualstudio.com/).
+<br/>
 
 
 ## 🎲 Running the Front End
