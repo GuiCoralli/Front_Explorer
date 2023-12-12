@@ -1,6 +1,6 @@
-Colocar uma imagem[logo]
+![image](https://github.com/GuiCoralli/frontend-FoodExplorer/assets/134714337/0eda23fd-6b56-45cc-ace7-09f94a26379a)
 
-colocar um gif (mostrando a página, o app como um todo)
+
 
 <h1 align="center">Food Explorer</h1> 
 
@@ -21,14 +21,14 @@ Este projeto de conclusão de curso, da plataforma educacional Rocketseat, simul
 
 
 <p align="center">
-  <a href="#-Sobre o Projeto:">Sobre o Projeto:</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Sobre o Projeto">Sobre o Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Acesse o Food Explorer">Acesse o Food Explorer</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Funcionalidades:">Funcionalidades:</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Características:">Características:</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Características">Características</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Como rodar o projeto">Como rodar o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Running the Front End">Running the Front End</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Running the Back End (server)">Running the Back End (server)</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Como rodar o projeto">Como rodar o projeto</a><br>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Rodando o Front End">Rodando o Front End</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Rodando o Back End (servidor)">Rodando o Back End (servidor)</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
 
@@ -44,14 +44,15 @@ ________________________________________________________________________________
 
 
 # 📄 Sobre o Projeto:
+<div>
 	Descubra o FoodExplorer, uma aplicação web que reune o melhor da culinária e programação. Este projeto final de curso, da plataforma educacional da Rocketseat, simula um cardápio digital para um restaurante. 
 	O FoodExplorer é uma ótima experiência que converge de maneira criativa entre duas áreas distintas como a gastronomia e tecnologia.
-<br /><br />
+</div>
 
 # 📌 Acesse o Food Explorer
-[Colocar o endereço deploy do frontend]
-https://
-<br /><br />
+<div>
+	👉🏼 https://corallifoodexplorer.netlify.app/
+</div>
 
 # ✅ Funcionalidades:
 - [x] Cadastro de administrador e usuários
@@ -70,33 +71,32 @@ https://
 
 # 🚀 Tecnologias
 ##   Projeto desenvolvido com as seguintes tecnologias:
-
-  <div>
- <img align="center" alt="Gui-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
- <img align="center" alt="Gui-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
- <img align="center" alt="Gui-JAVASCRIPT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
- <img align="center" alt="Gui-NODE" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/Node.js-original.svg">
- <img align="center" alt="Gui-REACT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/react.js-original.svg">
- </div>
+<div>
+	<img align="center" alt="Gui-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+ 	<img align="center" alt="Gui-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+ 	<img align="center" alt="Gui-JAVASCRIPT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
+ 	<img align="center" alt="Gui-NODE" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg">
+ 	<img align="center" alt="Gui-REACT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+</div>
 
 # 🖼️ Imagens
 
 <div align="center">
-	<img src="https://i.ibb.co/pLDmkcs/screenshot-01.jpg" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="https://i.ibb.co/TTxYNyC/screenshot-02.jpg" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="https://i.ibb.co/Z103qny/screenshot-03.jpg" alt="" width="250px" />
+	<img src="" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="" alt="" width="250px" />
 	<br /><br />
-	<img src="https://i.ibb.co/zhL861Q/screenshot-04.jpg" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="https://i.ibb.co/LNhcVXT/screenshot-05.jpg" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="https://i.ibb.co/wwWRB4J/screenshot-06.jpg" alt="" width="250px" />
+	<img src="" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="h" alt="" width="250px" />
 	<br /><br />
-	<img src="https://i.ibb.co/QQ7TTHD/screenshot-07.png" alt="" width="100px" />
-	<img src="https://i.ibb.co/dBTYSgT/screenshot-08.png" alt="" width="100px" />
-	<img src="https://i.ibb.co/mGNJxmZ/screenshot-09.png" alt="" width="100px" />
-	<img src="https://i.ibb.co/zbCxHzS/screenshot-10.png" alt="" width="100px" />
-	<img src="https://i.ibb.co/5LpFF97/screenshot-11.png" alt="" width="100px" />
-	<img src="https://i.ibb.co/LPZTxck/screenshot-12.png" alt="" width="100px" />
-	<img src="https://i.ibb.co/7QxfPpq/screenshot-13.png" alt="" width="100px" />
+	<img src="h" alt="" width="100px" />
+	<img src="" alt="" width="100px" />
+	<img src="" alt="" width="100px" />
+	<img src="h" alt="" width="100px" />
+	<img src="" alt="" width="100px" />
+	<img src="" alt="" width="100px" />
+	<img src="" alt="" width="100px" />
 </div>
 
 <br /><br />
@@ -105,11 +105,11 @@ https://
 
 ### Pré-requisitos:
 Instalar em sua máquina as seguintes ferramentas:
-** [Git](https://git-scm.com);
-** [Node.js](https://nodejs.org/en/).
+- [x] [Git](https://git-scm.com);
+- [x] [Node.js](https://nodejs.org/en/).
 
 Ter um editor para trabalhar com o código, como por exemplo:
-***[VSCode](https://code.visualstudio.com/).
+- [x] [VSCode](https://code.visualstudio.com/).
 
 <br />
 
