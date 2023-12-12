@@ -25,7 +25,7 @@ This is final course project, from the Rocketseat educational platform, simulate
   <a href="#-Technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-How to run the project">How to run the project</a><br>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Running the Front End">Running the Front End </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Running the Back End (server)">Running the Back End (server)</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Important ">Important</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
 
@@ -99,16 +99,18 @@ ________________________________________________________________________________
 # 💻 How to run the project
 
 ### Prerequisites:
-	Install the following tools on your machine:
+
+ Install the following tools on your machine: 
 - [x] [Git](https://git-scm.com)
 - [x] [Node.js](https://nodejs.org/en/)
+- [X] [Insomnia](https://insomnia.rest/download)
 
 It is important to have an editor to work with the code, such as:
 - [x] [VSCode](https://code.visualstudio.com/)
 <br/>
 
 
-## 🎲 Running the Front End
+## 🔄✅ Running the Front End
 
 Clone the repository by writing the following command line in the Vscode terminal:
 ```
@@ -134,32 +136,12 @@ The default port for the Front End is 5173 - access <http://localhost:5173>
 <br /><br />
 
 
-### 🎲 Running the Back End (server)
+## ⚠️ Important 
+<div>
+    🎲 To run the the Back End (server) of this project you can find more information through this link: 
 
-Clone the repository by writing the following command line in the Vscode terminal:
-```
-git clone https://github.com/GuiCoralli/backend-FoodExplorer.git
-```
-
-Access the project folder in terminal/cmd:
-```
-cd backend-food-explorer
-```
-
-Install dependencies:
-```
-npm install
-```
-
-Run the application in development mode:
-```
-npm run dev
-```
-
-Server will start on port:3333 - access <http://localhost:3333>
-
-<br />
-
+ - [x] https://github.com/GuiCoralli/backend-FoodExplorer
+</div>
 
 ### Author
 ------------
