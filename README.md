@@ -1,4 +1,24 @@
 ![image](https://github.com/GuiCoralli/frontend-FoodExplorer/assets/134714337/0eda23fd-6b56-45cc-ace7-09f94a26379a)
+# 🖼️ Images
+
+<div align="center">
+	<img src="" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="" alt="" width="250px" />
+	<br /><br />
+	<img src="" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="" alt="" width="250px" />
+	<br /><br />
+	<img src="" alt="" width="100px" />
+	<img src="" alt="" width="100px" />
+	<img src="" alt="" width="100px" />
+	<img src="" alt="" width="100px" />
+	<img src="" alt="" width="100px" />
+	<img src="" alt="" width="100px" />
+	
+</div>
+<br /><br />
 
 <h1 align="center">Food Explorer</h1> 
 
@@ -75,26 +95,6 @@ ________________________________________________________________________________
  	<img align="center" alt="Gui-REACT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
 </div>
 
-# 🖼️ Images
-
-<div align="center">
-	<img src="" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="" alt="" width="250px" />
-	<br /><br />
-	<img src="" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="" alt="" width="250px" />
-	<br /><br />
-	<img src="" alt="" width="100px" />
-	<img src="" alt="" width="100px" />
-	<img src="" alt="" width="100px" />
-	<img src="" alt="" width="100px" />
-	<img src="" alt="" width="100px" />
-	<img src="" alt="" width="100px" />
-	
-</div>
-<br /><br />
 
 # 💻 How to run the project
 
@@ -138,7 +138,7 @@ The default port for the Front End is 5173 - access <http://localhost:5173>
 
 ## ⚠️ Important 
 <div>
-    🎲 To run the the Back End (server) of this project you can find more information through this link: 
+     🎲 To run the the Back End (server) of this project you can find more information through this link: 
 
  - [x] https://github.com/GuiCoralli/backend-FoodExplorer
 </div>
