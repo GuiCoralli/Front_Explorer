@@ -43,7 +43,7 @@ This is final course project, from the Rocketseat educational platform, simulate
   <a href="#-Functionalities">Functionalities</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Characteristics">Characteristics</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-How to run the project">How to run the project</a><br>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Prerequisites">Prerequisites</a><br>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Running the Front End">Running the Front End </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Important ">Important</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
@@ -59,7 +59,7 @@ This is final course project, from the Rocketseat educational platform, simulate
 
 _____________________________________________________________________________________
 
-# 📄 About the Project:
+# 📄 About the Project
 <div>
 	Discover FoodExplorer, a web application that brings together the best of cooking and programming. This final course project, from the Rocketseat educational platform, simulates a digital menu for a restaurant. 
 	FoodExplorer is a great experience that creatively converges between two distinct areas such as gastronomy and technology.
@@ -71,7 +71,7 @@ ________________________________________________________________________________
 	👉🏼 https://corallifoodexplorer.netlify.app/
 </div>
 
-# ✅ Functionalities:
+# ✅ Functionalities
 - [x] Administrator and user registration
 - [x] Registration, editing and deletion of products (administrator)
 - [x] Product consultation
@@ -81,13 +81,13 @@ ________________________________________________________________________________
 - [x] Changing the status of orders (administrator)
 <br /><br />
 
-# 🔨 Characteristics:
+# ⚙️ Characteristics
 - [x] Responsiveness
 - [x] Light/dark mode
 <br /><br />
 
 # 🚀 Technologies
-## Project developed with the following technologies:
+## Project developed with the following technologies
 <div>
 	<img align="center" alt="Gui-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
  	<img align="center" alt="Gui-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
@@ -97,11 +97,9 @@ ________________________________________________________________________________
 </div>
 
 
-# 💻 How to run the project
+# 💻 Prerequisites
 
-### Prerequisites:
-
- Install the following tools on your machine: 
+ Install the following tools on your machine 
 - [x] [Git](https://git-scm.com)
 - [x] [Node.js](https://nodejs.org/en/)
 - [X] [Insomnia](https://insomnia.rest/download)
