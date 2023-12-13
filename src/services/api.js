@@ -5,4 +5,4 @@ export const api = axios.create({
 });
 
 /* Use "http://localhost:3333" para acessar o database local */
-/* Use "" para acessar o database online */
+/* Use "https://backend-foodexplorer-api-6tji.onrender.com" para acessar o database online */

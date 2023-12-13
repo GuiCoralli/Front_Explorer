@@ -1,6 +1,26 @@
-Colocar uma imagem[logo]
+![image](https://github.com/GuiCoralli/frontend-FoodExplorer/assets/134714337/0a9c06cf-dd50-4198-9c16-4c9c6960c85a)
 
-colocar um gif (mostrando a página, o app como um todo)
+
+# 🖼️ Imagens
+
+<div align="center">
+	<img src="" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="" alt="" width="250px" />
+	<br /><br />
+	<img src="" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="h" alt="" width="250px" />
+	<br /><br />
+	<img src="h" alt="" width="100px" />
+	<img src="" alt="" width="100px" />
+	<img src="" alt="" width="100px" />
+	<img src="h" alt="" width="100px" />
+	<img src="" alt="" width="100px" />
+	<img src="" alt="" width="100px" />
+	<img src="" alt="" width="100px" />
+</div>
+
 
 <h1 align="center">Food Explorer</h1> 
 
@@ -16,19 +36,19 @@ colocar um gif (mostrando a página, o app como um todo)
 
 
 <p align="center">
-Este projeto de conclusão de curso, da plataforma educacional Rocketseat, simula um cardápio digital para um restaurante, feito pela GuiCoralli para consolidar o aprendizado de tecnologias de aplicações WEB.
+Este projeto de conclusão de curso, da plataforma educacional Rocketseat, simula um cardápio digital para um restaurante, feito por GuiCoralli para consolidar o aprendizado de tecnologias de aplicações WEB.
 </p>
 
 
 <p align="center">
-  <a href="#-Sobre o Projeto:">Sobre o Projeto:</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Sobre o Projeto">Sobre o Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Acesse o Food Explorer">Acesse o Food Explorer</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Funcionalidades:">Funcionalidades:</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Características:">Características:</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Características">Características</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Como rodar o projeto">Como rodar o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Running the Front End">Running the Front End</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Running the Back End (server)">Running the Back End (server)</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Pré-requisitos">Pré-requisitos</a><br>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Rodando o Front End">Rodando o Front End</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Importante">Importante</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
 
@@ -43,17 +63,18 @@ Este projeto de conclusão de curso, da plataforma educacional Rocketseat, simul
 _____________________________________________________________________________________
 
 
-# 📄 Sobre o Projeto:
+# 📄 Sobre o Projeto
+<div>
 	Descubra o FoodExplorer, uma aplicação web que reune o melhor da culinária e programação. Este projeto final de curso, da plataforma educacional da Rocketseat, simula um cardápio digital para um restaurante. 
 	O FoodExplorer é uma ótima experiência que converge de maneira criativa entre duas áreas distintas como a gastronomia e tecnologia.
-<br /><br />
+</div>
 
 # 📌 Acesse o Food Explorer
-[Colocar o endereço deploy do frontend]
-https://
-<br /><br />
+<div>
+	👉🏼 https://corallifoodexplorer.netlify.app/
+</div>
 
-# ✅ Funcionalidades:
+# ✅ Funcionalidades
 - [x] Cadastro de administrador e usuários
 - [x] Cadastro, edição e exclusão de produtos (administrador)
 - [x] Consulta de produtos
@@ -63,53 +84,29 @@ https://
 - [x] Alteração do status dos pedidos (administrador)
 <br /><br />
 
-# 🔨 Características:
+#  Características
 - [x] Responsividade
 - [x] Modo claro/escuro
 <br /><br />
 
 # 🚀 Tecnologias
-##   Projeto desenvolvido com as seguintes tecnologias:
-
-  <div>
- <img align="center" alt="Gui-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
- <img align="center" alt="Gui-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
- <img align="center" alt="Gui-JAVASCRIPT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
- <img align="center" alt="Gui-NODE" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/Node.js-original.svg">
- <img align="center" alt="Gui-REACT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/react.js-original.svg">
- </div>
-
-# 🖼️ Imagens
-
-<div align="center">
-	<img src="https://i.ibb.co/pLDmkcs/screenshot-01.jpg" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="https://i.ibb.co/TTxYNyC/screenshot-02.jpg" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="https://i.ibb.co/Z103qny/screenshot-03.jpg" alt="" width="250px" />
-	<br /><br />
-	<img src="https://i.ibb.co/zhL861Q/screenshot-04.jpg" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="https://i.ibb.co/LNhcVXT/screenshot-05.jpg" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="https://i.ibb.co/wwWRB4J/screenshot-06.jpg" alt="" width="250px" />
-	<br /><br />
-	<img src="https://i.ibb.co/QQ7TTHD/screenshot-07.png" alt="" width="100px" />
-	<img src="https://i.ibb.co/dBTYSgT/screenshot-08.png" alt="" width="100px" />
-	<img src="https://i.ibb.co/mGNJxmZ/screenshot-09.png" alt="" width="100px" />
-	<img src="https://i.ibb.co/zbCxHzS/screenshot-10.png" alt="" width="100px" />
-	<img src="https://i.ibb.co/5LpFF97/screenshot-11.png" alt="" width="100px" />
-	<img src="https://i.ibb.co/LPZTxck/screenshot-12.png" alt="" width="100px" />
-	<img src="https://i.ibb.co/7QxfPpq/screenshot-13.png" alt="" width="100px" />
+##   Projeto desenvolvido com as seguintes tecnologias
+<div>
+	<img align="center" alt="Gui-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+ 	<img align="center" alt="Gui-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+ 	<img align="center" alt="Gui-JAVASCRIPT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
+ 	<img align="center" alt="Gui-NODE" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg">
+ 	<img align="center" alt="Gui-REACT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
 </div>
 
-<br /><br />
 
-# 💻 Como rodar o projeto
+# 💻 Pré-requisitos
+Instalar em sua máquina as seguintes ferramentas
+- [x] [Git](https://git-scm.com)
+- [x] [Node.js](https://nodejs.org/en/)
 
-### Pré-requisitos:
-Instalar em sua máquina as seguintes ferramentas:
-** [Git](https://git-scm.com);
-** [Node.js](https://nodejs.org/en/).
-
-Ter um editor para trabalhar com o código, como por exemplo:
-***[VSCode](https://code.visualstudio.com/).
+Ter um editor para trabalhar com o código, como por exemplo
+- [x] [VSCode](https://code.visualstudio.com/)
 
 <br />
 
@@ -139,32 +136,12 @@ npm run dev
 A porta padrão para o Front End é 5173 - acesse <http://localhost:5173>
 <br /><br />
 
+## ⚠️ Importante 
+<div>
+🎲 Para executar o Back End (server) deste projeto você pode encontrar mais informações através deste link:
 
-### 🎲 Rodando o Back End (servidor)
-
-Clone o repositório:
-```
-git clone https://github.com/GuiCoralli/backend-FoodExplorer.git
-```
-
-Acesse a pasta do projeto no terminal/cmd:
-```
-cd backend-food-explorer
-```
-
-Instale as dependências:
-```
-npm install
-```
-
-Execute a aplicação em modo de desenvolvimento:
-```
-npm run dev
-```
-
-O servidor inciará na porta:3333 - acesse <http://localhost:3333>
-
-<br />
+- [x]  https://github.com/GuiCoralli/backend-FoodExplorer
+</div>
 
 
 ### Autor
@@ -175,6 +152,7 @@ O servidor inciará na porta:3333 - acesse <http://localhost:3333>
  <br /> <sub><b>Guilherme Coralli</b></sub></a>
 
 
-💡 Criado por Guilherme Coralli. 👋🏽 Entre em contato!
+💡 Criado por Guilherme Coralli. 
 
+👋🏽 Entre em contato!
 [![Linkedin Badge](https://img.shields.io/badge/LinkedIn-0077B5?logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/guicoralli/)](https://www.linkedin.com/in/guicoralli/) 
