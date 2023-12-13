@@ -1,15 +1,11 @@
 ![image](https://github.com/GuiCoralli/frontend-FoodExplorer/assets/134714337/d182717b-69cb-4590-b542-a9768aacb28c)
 
 # 🎥 Video
-<div>
-	<p align="center" ![Food Explorer -Video(gifanimado) 2](https://github.com/GuiCoralli/frontend-FoodExplorer/assets/134714337/e44124e3-b5e5-4a89-a7af-05dd4d327beb)
-	</p>
-</div>
-		
+
+![Food Explorer -Video(gifanimado) 2](https://github.com/GuiCoralli/frontend-FoodExplorer/assets/134714337/a87d292c-06a3-46f1-bce9-0c497d620d45)
+ 
 
 <h1 align="center">Food Explorer</h1> 
-
-
 
 <p align="center">
 	  <img alt="Project status" src="https://img.shields.io/badge/Status-Em construção-orange">
