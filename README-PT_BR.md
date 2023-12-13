@@ -1,4 +1,5 @@
-![image](https://github.com/GuiCoralli/frontend-FoodExplorer/assets/134714337/0eda23fd-6b56-45cc-ace7-09f94a26379a)
+![image](https://github.com/GuiCoralli/frontend-FoodExplorer/assets/134714337/0a9c06cf-dd50-4198-9c16-4c9c6960c85a)
+
 
 # 🖼️ Imagens
 
