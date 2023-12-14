@@ -19,15 +19,10 @@ This is final course project, from the Rocketseat educational platform, simulate
   <a href="#-Functionalities">Functionalities</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Characteristics">Characteristics</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<<<<<<< HEAD
   <a href="#-How to run the project">How to run the project</a><br>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Running the Front End">Running the Front End </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Running the Back End (server)">Running the Back End (server)</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-=======
   <a href="#-Prerequisites">Prerequisites</a><br>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Running the Front End">Running the Front End </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Important ">Important</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
->>>>>>> b2b51d5a7bcebfec63e4f0ae76f7942e932b97f3
 </p>
 
 
@@ -56,35 +51,15 @@ This is final course project, from the Rocketseat educational platform, simulate
 
 _____________________________________________________________________________________
 
-<<<<<<< HEAD
-# 📄 About the Project:
-=======
 # 📄 About the Project
->>>>>>> b2b51d5a7bcebfec63e4f0ae76f7942e932b97f3
+
 <div>
 	Discover FoodExplorer, a web application that brings together the best of cooking and programming. This final course project, from the Rocketseat educational platform, simulates a digital menu for a restaurant. 
 	FoodExplorer is a great experience that creatively converges between two distinct areas such as gastronomy and technology.
 </div>
 
 # 📌 Access Food Explorer
-<<<<<<< HEAD
-<div>
-	https:// [Colocar o endereço deploy do frontend]
-</div>
 
-# ✅ Functionalities:
-- [x] Administrator and user registration
-- [x] Registration, editing and deletion of products (administrator)
-- [x] Product consultation
-- [x] Placing orders (user)
-- [x] Payment simulation (user)
-- [x] Order consultation
-- [x] Changing the status of orders (administrator)
-<br /><br />
-
-# 🔨 Characteristics:
-=======
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ee934639-600d-452f-9719-0096228d3430/deploy-status)](https://app.netlify.com/sites/foodexplorercoralli/deploys)
 <div>
 	👉🏼 https://corallifoodexplorer.netlify.app/
 </div>
@@ -100,72 +75,41 @@ ________________________________________________________________________________
 <br /><br />
 
 # ⚙️ Characteristics
->>>>>>> b2b51d5a7bcebfec63e4f0ae76f7942e932b97f3
 - [x] Responsiveness
 - [x] Light/dark mode
 <br /><br />
 
 # 🚀 Technologies
-<<<<<<< HEAD
+
 ## Project developed with the following technologies:
-=======
+
 ## Project developed with the following technologies
->>>>>>> b2b51d5a7bcebfec63e4f0ae76f7942e932b97f3
+
 <div>
 	<img align="center" alt="Gui-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
  	<img align="center" alt="Gui-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
  	<img align="center" alt="Gui-JAVASCRIPT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
-<<<<<<< HEAD
  	<img align="center" alt="Gui-NODE" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
  	<img align="center" alt="Gui-REACT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
 </div>
 
-# 🖼️ Images
-
-<div align="center">
-	<img src="https://i.ibb.co/pLDmkcs/screenshot-01.jpg" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="https://i.ibb.co/TTxYNyC/screenshot-02.jpg" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="https://i.ibb.co/Z103qny/screenshot-03.jpg" alt="" width="250px" />
-	<br /><br />
-	<img src="https://i.ibb.co/zhL861Q/screenshot-04.jpg" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="https://i.ibb.co/LNhcVXT/screenshot-05.jpg" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="https://i.ibb.co/wwWRB4J/screenshot-06.jpg" alt="" width="250px" />
-	<br /><br />
-	<img src="https://i.ibb.co/QQ7TTHD/screenshot-07.png" alt="" width="100px" />
-	<img src="https://i.ibb.co/dBTYSgT/screenshot-08.png" alt="" width="100px" />
-	<img src="https://i.ibb.co/mGNJxmZ/screenshot-09.png" alt="" width="100px" />
-	<img src="https://i.ibb.co/zbCxHzS/screenshot-10.png" alt="" width="100px" />
-	<img src="https://i.ibb.co/5LpFF97/screenshot-11.png" alt="" width="100px" />
-	<img src="https://i.ibb.co/LPZTxck/screenshot-12.png" alt="" width="100px" />
-	<img src="https://i.ibb.co/7QxfPpq/screenshot-13.png" alt="" width="100px" />
-</div>
-<br /><br />
-=======
- 	<img align="center" alt="Gui-NODE" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg">
- 	<img align="center" alt="Gui-REACT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
-</div>
-
->>>>>>> b2b51d5a7bcebfec63e4f0ae76f7942e932b97f3
 
 # 💻 Prerequisites
 
-<<<<<<< HEAD
-### Prerequisites:
-	Install the following tools on your machine:
+ Install the following tools on your machine:
 *[Git](https://git-scm.com);
 *[Node.js](https://nodejs.org/en/).
 
-It is important to have an editor to work with the code, such as:
+ It is important to have an editor to work with the code, such as:
 *[VSCode](https://code.visualstudio.com/).
-=======
- Install the following tools on your machine 
+
+  Install the following tools on your machine 
 - [x] [Git](https://git-scm.com)
 - [x] [Node.js](https://nodejs.org/en/)
 - [X] [Insomnia](https://insomnia.rest/download)
 
-It is important to have an editor to work with the code, such as:
+  It is important to have an editor to work with the code, such as:
 - [x] [VSCode](https://code.visualstudio.com/)
->>>>>>> b2b51d5a7bcebfec63e4f0ae76f7942e932b97f3
 <br/>
 
 
