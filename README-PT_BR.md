@@ -66,12 +66,12 @@ O segundo ambiente é “você” que chamamos de <strong>“usuário” </stron
 <div>
 	👉🏼 https://corallifoodexplorer.netlify.app/
 
-  ### Usuário admin
+  ### admin
 
 - [x] Login: admin@email.com
 - [x] Password: 123456
 
- ### Usuário 
+ ### User
 
 - [x] Login: example@email.com
 - [x] Password: 123456
