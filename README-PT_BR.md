@@ -1,29 +1,4 @@
-![image](https://github.com/GuiCoralli/frontend-FoodExplorer/assets/134714337/0a9c06cf-dd50-4198-9c16-4c9c6960c85a)
-
-
-# 🖼️ Imagens
-
-<div align="center">
-	<img src="" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="" alt="" width="250px" />
-	<br /><br />
-	<img src="" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="" alt="" width="250px" />&nbsp;&nbsp;&nbsp;&nbsp;
-	<img src="h" alt="" width="250px" />
-	<br /><br />
-	<img src="h" alt="" width="100px" />
-	<img src="" alt="" width="100px" />
-	<img src="" alt="" width="100px" />
-	<img src="h" alt="" width="100px" />
-	<img src="" alt="" width="100px" />
-	<img src="" alt="" width="100px" />
-	<img src="" alt="" width="100px" />
-</div>
-
-
 <h1 align="center">Food Explorer</h1> 
-
 
 
 <p align="center">
@@ -60,13 +35,26 @@ Este projeto de conclusão de curso, da plataforma educacional Rocketseat, simul
   <a href="https://github.com/GuiCoralli/frontend-FoodExplorer/blob/main/README.md"> English
   </a>
 
+
+#
+
+   ![image](https://github.com/GuiCoralli/frontend-FoodExplorer/assets/134714337/d182717b-69cb-4590-b542-a9768aacb28c)
+#
+
+
+# 🎥 Video
+
+![Food Explorer -Video(gifanimado) 2](https://github.com/GuiCoralli/frontend-FoodExplorer/assets/134714337/a87d292c-06a3-46f1-bce9-0c497d620d45)
+ 
+##
+
 _____________________________________________________________________________________
 
 
 # 📄 Sobre o Projeto
 <div>
-	Descubra o FoodExplorer, uma aplicação web que reune o melhor da culinária e programação. Este projeto final de curso, da plataforma educacional da Rocketseat, simula um cardápio digital para um restaurante. 
-	O FoodExplorer é uma ótima experiência que converge de maneira criativa entre duas áreas distintas como a gastronomia e tecnologia.
+	Descubra o FoodExplorer, uma aplicação Web que reune o melhor da culinária e programação. <br>
+	Este projeto final de curso, da plataforma educacional da <a href="https://app.rocketseat.com.br">Rocketseat</a>, simula um cardápio digital para um restaurante.<br> 	O FoodExplorer é uma ótima experiência que converge de maneira criativa entre duas áreas distintas como a gastronomia e a tecnologia.
 </div>
 
 # 📌 Acesse o Food Explorer
@@ -101,11 +89,12 @@ ________________________________________________________________________________
 
 
 # 💻 Pré-requisitos
-Instalar em sua máquina as seguintes ferramentas
+Instalar em sua máquina as seguintes ferramentas:
 - [x] [Git](https://git-scm.com)
 - [x] [Node.js](https://nodejs.org/en/)
+- [X] [Insomnia](https://insomnia.rest/download)
 
-Ter um editor para trabalhar com o código, como por exemplo
+É importante ter um editor para trabalhar com o código, como por exemplo:
 - [x] [VSCode](https://code.visualstudio.com/)
 
 <br />
