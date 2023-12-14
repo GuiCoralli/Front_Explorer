@@ -8,7 +8,6 @@
 </p>
 
 
-## About
 <div>
 <p align="justify">
 	Discover FoodExplorer, a web application that brings together the best of cooking and programming.This final course project, from the <a href="https://app.rocketseat.com.br">Rocketseat</a> educational platform, simulates a digital menu for a restaurant.
