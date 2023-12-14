@@ -9,7 +9,6 @@
 </p>
 
 
-## Sobre
 <p align="justify">
 	Descubra o FoodExplorer, uma aplicação Web que reune o melhor da culinária e programação. 
 	Este projeto final de curso, da plataforma educacional da <a href="https://app.rocketseat.com.br">Rocketseat</a>, simula um cardápio digital para um restaurante. 
