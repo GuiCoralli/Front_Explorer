@@ -104,7 +104,7 @@ export function AdminRegister() {
                     welcome &&
                     <Welcome>
                         <WelcomeMessage>
-                            <p>Bem vindo(a) ao Food Explorer, sua experiência gastronomica em forma de aplicativo para um restaurante online!</p>
+                            <p> Bem vindo(a) ao Food Explorer, sua experiência gastronomica em forma de aplicativo para um restaurante online!</p>
                             <p> Se você está se concectando pela primeira vez, fica tranquilo!</p> 
                             <p> Vamos precisar fazer uma conta de administrador. Vamos começar?</p>
                             <p> É bem fácil! Basta clicar em Continuar, abaixo e em seguida cadastrar alguns dados.</p>
