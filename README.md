@@ -8,12 +8,15 @@
 </p>
 
 
-
+## About
+<div>
 <p align="justify">
-	Discover FoodExplorer, a web application that brings together the best of cooking and programming. <br> This final course project, from the <a href="https://app.rocketseat.com.br">Rocketseat</a> educational platform, simulates a digital menu for a restaurant. <br>
+	Discover FoodExplorer, a web application that brings together the best of cooking and programming.This final course project, from the <a href="https://app.rocketseat.com.br">Rocketseat</a> educational platform, simulates a digital menu for a restaurant.
 	FoodExplorer is a great experience that creatively converges between two distinct areas such as gastronomy and technology.
 </p>
+<div>
 
+## Menu
 <p align="center">
  <a href="#-About the Project">About the Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
  <a href="#-Access Food Explorer">Access Food Explorer</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -35,22 +38,11 @@
   <a href="https://github.com/GuiCoralli/frontend-FoodExplorer/blob/main/README.md"> English
   </a>
 
-#
-
-
-#
-
-
-# 🎥 Video
-
-![Food Explorer -Video(gifanimado) 2](https://github.com/GuiCoralli/frontend-FoodExplorer/assets/134714337/a87d292c-06a3-46f1-bce9-0c497d620d45)
- 
-##
-
 
 
 
 _____________________________________________________________________________________
+
 
 # 📄 About the Project
 
@@ -69,11 +61,33 @@ Food Explorer is like a magical menu on the internet. The Chef makes the food an
 
 </div>
 
+
+## 🎥 Layout
+
+
+<div align="center">
+<img width="750" height="550" title="Layout" src="https://github.com/GuiCoralli/frontend-FoodExplorer/assets/134714337/a87d292c-06a3-46f1-bce9-0c497d620d45"/>
+	
+</div>
+
+
 # 📌 Access Food Explorer
 
 <div>
 	👉🏼 https://corallifoodexplorer.netlify.app/
+
+	
+ ### User admin
+
+- [x] Login: admin@email.com
+- [x] Password: 123456
+
+ ### User 
+
+- [x] Login: example@email.com
+- [x] Password: 123456
 </div>
+
 
 # ✅ Functionalities
 - [x] Administrator and user registration
@@ -83,24 +97,25 @@ Food Explorer is like a magical menu on the internet. The Chef makes the food an
 - [x] Payment simulation (user)
 - [x] Order consultation
 - [x] Changing the status of orders (administrator)
-<br /><br />
+
 
 # ⚙️ Characteristics
 - [x] Responsiveness
 - [x] Light/dark mode
 - [x] Admin/user mode 
-<br /><br />
 
-# 🚀 Technologies
-## Project developed with the following technologies
 
+# 🚀 Technologies 
+ Project developed with the following technologies:
 <div>
-	<img align="center" alt="Gui-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
- 	<img align="center" alt="Gui-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
- 	<img align="center" alt="Gui-JAVASCRIPT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
- 	<img align="center" alt="Gui-NODE" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
- 	<img align="center" alt="Gui-REACT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
-</div>
+	
+- [x] [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) <img align="center" alt="Gui-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+- [x] [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) <img align="center" alt="Gui-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+- [x] [Javascript](https://developer.mozilla.org/en-US/docs/Web/Javascript) <img align="center" alt="Gui-JAVASCRIPT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
+- [x] [Node.Js](https://nodejs.org/api/documentation.html) <img align="center" alt="Gui-NODEJS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg">
+- [x] [REACT](https://developer.mozilla.org/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started) <img align="center" alt="Gui-REACT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+ 
+ </div>
 
 # 💻 Prerequisites
 
@@ -111,7 +126,6 @@ Food Explorer is like a magical menu on the internet. The Chef makes the food an
 
 It is important to have an editor to work with the code, such as:
 - [x] [VSCode](https://code.visualstudio.com/)
-<br/>
 
 
 # 🔄✅ Running the Front End
@@ -137,11 +151,9 @@ npm run dev
 ```
 
 The default port for the Front End is 5173 - access <http://localhost:5173>
-<br /><br />
 
 
-
-## ⚠️ Important 
+# ⚠️ Important 
 <div>
 	
  🎲 To run the the Back End (server) of this project you can find more information through this link: 
