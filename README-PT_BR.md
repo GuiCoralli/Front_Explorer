@@ -97,8 +97,9 @@ O segundo ambiente é “você” que chamamos de <strong>“usuário” </stron
 
 
 # 🚀 Tecnologias
-##   Projeto desenvolvido com as seguintes tecnologias:
-div>
+
+Projeto desenvolvido com as seguintes tecnologias:
+<div>
 	
 - [x] [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) <img align="center" alt="Gui-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
 - [x] [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) <img align="center" alt="Gui-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
