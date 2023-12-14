@@ -10,7 +10,8 @@
 
 
 <p align="center">
-This is final course project, from the Rocketseat educational platform, simulates a digital menu for a restaurant, made by GuiCoralli to fix the learning of WEB applications technologies.
+	Discover FoodExplorer, a web application that brings together the best of cooking and programming. <br> This final course project, from the <a href="https://app.rocketseat.com.br">Rocketseat</a> educational platform, simulates a digital menu for a restaurant. <br>
+	FoodExplorer is a great experience that creatively converges between two distinct areas such as gastronomy and technology.
 </p>
 
 <p align="center">
@@ -53,8 +54,18 @@ ________________________________________________________________________________
 # 📄 About the Project
 
 <div>
-	Discover FoodExplorer, a web application that brings together the best of cooking and programming. <br> This final course project, from the <a href="https://app.rocketseat.com.br">Rocketseat</a> educational platform, simulates a digital menu for a restaurant. <br>
-	FoodExplorer is a great experience that creatively converges between two distinct areas such as gastronomy and technology.
+Food Explorer serves as an online restaurant menu that you can view on your cell phone or computer.<br>
+The whole process was done from start to finish using special computer things, but you don't need to understand all of it. <br>
+On the menu, there are two "people". The first is the Chef of the restaurant, who we call <strong>"admin"</strong>.
+	
+<br> The Chef can do things like create food, check the food that already exists, change something and, if he wants, even remove that dish that wasn't very successful. Each food has a beautiful photo, a name, a category, a quick description, the ingredients and how much it costs. <br> 
+When the Chef adds new food, the menu says "Congratulations!" and return to the main page.
+
+The second person is “you”, who we call <strong>“user” </strong>, who just wants to see and choose the food. <br> You can look at all the food the chef has made, and if one catches your eye, you can click on it and order it from the restaurant. <br> When you click, the menu shows more information about that food on a new page, as if it were a story about it.<br> 
+
+Food Explorer is like a magical menu on the internet. The chef makes the food and you choose which ones you want to try! 
+
+
 </div>
 
 # 📌 Access Food Explorer
