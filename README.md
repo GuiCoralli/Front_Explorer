@@ -47,17 +47,14 @@ ________________________________________________________________________________
 # 📄 About the Project
 
 <div>
-Food Explorer serves as an online restaurant menu that you can view on your cell phone or computer.<br>
-The whole process was done from start to finish using special computer things, but you don't need to understand all of it. <br>
-On the menu, there are two "people". The first is the Chef of the restaurant, who we call <strong>"admin"</strong>.
-	
-<br> The Chef can do things like create food, check the food that already exists, change something and, if he wants, even remove that dish that wasn't very successful. Each food has a beautiful photo, a name, a category, a quick description, the ingredients and how much it costs. <br> 
-When the Chef adds new food, the menu says "Congratulations!" and return to the main page.
 
-The second person is “you”, who we call <strong>“user” </strong>, who just wants to see and choose the food. <br> You can look at all the food the Chef has made, and if one catches your eye, you can click on it and order it from the restaurant. <br> When you click, the menu shows more information about that food on a new page, as if it were a story about it.<br> 
+Food Explorer serves as an online restaurant menu that you can view on your cell phone and/or computer.<br> All development of the application was done using advanced computer code resources, but I will explain it in a diferent way.<br>
+It is possible to simulate two different environments while using the application.
 
-Food Explorer is like a magical menu on the internet. The Chef makes the food and you choose which ones you want to try! 
+The first is the administrative part of the restaurant, which we call <strong>"admin"</strong>.<br> In this environment, the restaurant owner is responsible for maintaining the menu and online orders.<br>
+You can add, change and check whether food, drinks and desserts already exist.
 
+The second environment is “you”, which we call <strong>“user” </strong>, where you can view the available food and choose, clicking and placing the order at the restaurant. When you click, the menu shows more information about that food on a new page.
 
 </div>
 
