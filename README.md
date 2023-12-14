@@ -72,7 +72,7 @@ The second environment is “you”, which we call <strong>“user” </strong>,
 	👉🏼 https://corallifoodexplorer.netlify.app/
 
 	
- ### User admin
+ ### admin
 
 - [x] Login: admin@email.com
 - [x] Password: 123456
