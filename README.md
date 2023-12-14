@@ -48,13 +48,12 @@ ________________________________________________________________________________
 
 <div>
 
-Food Explorer serves as an online restaurant menu that you can view on your cell phone and/or computer.<br> All development of the application was done using advanced computer code resources, but I will explain it in a diferent way.<br>
-It is possible to simulate two different environments while using the application.
+Food Explorer works like an online restaurant menu that you can view on your cell phone and/or computer.<br> All development of the application was done using advanced computer code resources, but I will explain it in a different way. <br> It is possible to simulate two different environments while using the application.
 
-The first is the administrative part of the restaurant, which we call <strong>"admin"</strong>.<br> In this environment, the restaurant owner is responsible for maintaining the menu and online orders.<br>
-You can add, change and check whether food, drinks and desserts already exist.
+The first environment is the administrative part of the restaurant, which we call <strong>"admin"</strong>.<br> In this environment, the restaurant owner is responsible for maintaining the menu and online orders.<br>
+You can add, change and check if there are already foods, drinks and desserts.
 
-The second environment is “you”, which we call <strong>“user” </strong>, where you can view the available food and choose, clicking and placing the order at the restaurant. When you click, the menu shows more information about that food on a new page.
+The second environment is “you”, which we call <strong>“user” </strong>, where you can view the food available and choose, clicking and placing the order at the restaurant. When clicked, the menu shows the order history and more information about that food on a new page.
 
 </div>
 
