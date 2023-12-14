@@ -53,7 +53,7 @@ ________________________________________________________________________________
 # 📄 About the Project
 
 <div>
-	Discover FoodExplorer, a web application that brings together the best of cooking and programming. This final course project, from the Rocketseat educational platform, simulates a digital menu for a restaurant. 
+	Discover FoodExplorer, a web application that brings together the best of cooking and programming. <br> This final course project, from the <a href="https://app.rocketseat.com.br">Rocketseat</a> educational platform, simulates a digital menu for a restaurant. <br>
 	FoodExplorer is a great experience that creatively converges between two distinct areas such as gastronomy and technology.
 </div>
 
