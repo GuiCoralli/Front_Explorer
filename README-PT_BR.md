@@ -9,14 +9,14 @@
 </p>
 
 
-
-<p align="left">
-	Descubra o FoodExplorer, uma aplicação Web que reune o melhor da culinária e programação. <br>
-	Este projeto final de curso, da plataforma educacional da <a href="https://app.rocketseat.com.br">Rocketseat</a>, simula um cardápio digital para um restaurante.<br> 
-	O FoodExplorer é uma 	ótima experiência que converge de maneira criativa entre duas áreas distintas como a gastronomia e a tecnologia.
+## Sobre
+<p align="justify">
+	Descubra o FoodExplorer, uma aplicação Web que reune o melhor da culinária e programação. 
+	Este projeto final de curso, da plataforma educacional da <a href="https://app.rocketseat.com.br">Rocketseat</a>, simula um cardápio digital para um restaurante. 
+	O FoodExplorer é uma ótima experiência que converge de maneira criativa entre duas áreas distintas como a gastronomia e a tecnologia.
 </p>
 
-
+## Menu
 <p align="center">
   <a href="#-Sobre o Projeto">Sobre o Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Acesse o Food Explorer">Acesse o Food Explorer</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -37,41 +37,48 @@
   <a href="https://github.com/GuiCoralli/frontend-FoodExplorer/blob/main/README.md"> English
   </a>
 
-
-#
-
-   ![image](https://github.com/GuiCoralli/frontend-FoodExplorer/assets/134714337/d182717b-69cb-4590-b542-a9768aacb28c)
-#
-
-
-# 🎥 Video
-
-![Food Explorer -Video(gifanimado) 2](https://github.com/GuiCoralli/frontend-FoodExplorer/assets/134714337/a87d292c-06a3-46f1-bce9-0c497d620d45)
- 
-##
-
 _____________________________________________________________________________________
 
 
 # 📄 Sobre o Projeto
-<div>	
-O Food Explorer funciona como um menu de restaurante on-line que você pode visualizar no seu celular ou computador.<br>
-Todo o processo foi feito do início ao fim usando recursos especiais de computador, mas você não precisa entender tudo. <br>
-No cardápio, há duas “pessoas”. O primeiro é o Chef do restaurante, a quem chamamos de <strong>"admin"</strong>.
+<div>
+	
+O Food Explorer funciona como um cardápio de restaurante online que você pode visualizar no seu celular e/ou computador.<br> Todo o desenvolvimento do aplicativo foi feito utilizando recursos avançados de código computacional, mas vou explicar de uma forma diferente. É possível simular dois ambientes diferentes durante a utilização do aplicativo.
 
-<br> O Chef pode fazer coisas como criar comida, verificar a comida que já existe, mudar alguma coisa e, se quiser, até retirar aquele prato que não fez muito sucesso. Cada alimento tem uma foto linda, um nome, uma categoria, uma descrição rápida, os ingredientes e quanto custa. <br>
-Quando o Chef acrescenta novos alimentos, o menu diz “Parabéns!” e retorne à página principal.
+O primeiro ambiente é a parte administrativa do restaurante, que chamamos de <strong>"admin"</strong>.<br> Neste ambiente, o dono do restaurante é responsável pela manutenção do cardápio e dos pedidos online.<br>
+Você pode adicionar, alterar e verificar se já existem alimentos, bebidas e sobremesas.
 
-A segunda pessoa é “você”, que chamamos de <strong>“usuário” </strong>, que quer apenas ver e escolher a comida. <br> Você pode ver toda a comida que o Chef preparou e, se alguma chamar sua atenção, você pode clicar nela e pedir no restaurante. <br> Ao clicar, o menu mostra mais informações sobre aquele alimento em uma nova página, como se fosse uma história sobre ele.<br>
+O segundo ambiente é “você” que chamamos de <strong>“usuário” </strong>, onde você pode visualizar a comida disponível e escolher, clicando e fazendo o pedido no restaurante. Ao clicar, o menu mostra o histórico de pedidos e mais informações sobre aquele alimento em uma nova página.
 
-Food Explorer é como um menu mágico na internet. O Chef prepara a comida e você escolhe quais quer experimentar!
- 
 </div>
+
+
+
+
+# 🎥 Layout
+
+<div align="center">
+<img width="750" height="550" title="Layout" src="https://github.com/GuiCoralli/frontend-FoodExplorer/assets/134714337/a87d292c-06a3-46f1-bce9-0c497d620d45"/>
+	
+</div>
+	
 
 # 📌 Acesse o Food Explorer
 <div>
 	👉🏼 https://corallifoodexplorer.netlify.app/
+
+  ### Usuário admin
+
+- [x] Login: admin@email.com
+- [x] Password: 123456
+
+ ### Usuário 
+
+- [x] Login: example@email.com
+- [x] Password: 123456
+
 </div>
+
 
 # ✅ Funcionalidades
 - [x] Cadastro de administrador e usuários
@@ -81,24 +88,25 @@ Food Explorer é como um menu mágico na internet. O Chef prepara a comida e voc
 - [x] Simulação de pagamento (usuário)
 - [x] Consulta de pedidos
 - [x] Alteração do status dos pedidos (administrador)
-<br /><br />
+
 
 #  Características
 - [x] Responsividade
 - [x] Modo claro/escuro
 - [x] Modo administrador/usuário
-<br /><br />
+
 
 # 🚀 Tecnologias
-##   Projeto desenvolvido com as seguintes tecnologias
-<div>
-	<img align="center" alt="Gui-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
- 	<img align="center" alt="Gui-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
- 	<img align="center" alt="Gui-JAVASCRIPT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
- 	<img align="center" alt="Gui-NODE" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg">
- 	<img align="center" alt="Gui-REACT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
-</div>
-
+##   Projeto desenvolvido com as seguintes tecnologias:
+div>
+	
+- [x] [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) <img align="center" alt="Gui-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+- [x] [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) <img align="center" alt="Gui-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+- [x] [Javascript](https://developer.mozilla.org/en-US/docs/Web/Javascript) <img align="center" alt="Gui-JAVASCRIPT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
+- [x] [Node.Js](https://nodejs.org/api/documentation.html) <img align="center" alt="Gui-NODEJS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg">
+- [x] [REACT](https://developer.mozilla.org/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started) <img align="center" alt="Gui-REACT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+ 
+ </div>
 
 # 💻 Pré-requisitos
 Instalar em sua máquina as seguintes ferramentas:
@@ -109,10 +117,8 @@ Instalar em sua máquina as seguintes ferramentas:
 É importante ter um editor para trabalhar com o código, como por exemplo:
 - [x] [VSCode](https://code.visualstudio.com/)
 
-<br />
 
-
-## 🎲 Rodando o Front End
+# 🎲 Rodando o Front End
 
 Clone o repositório:
 ```
@@ -135,9 +141,9 @@ npm run dev
 ```
 
 A porta padrão para o Front End é 5173 - acesse <http://localhost:5173>
-<br /><br />
 
-## ⚠️ Importante 
+
+# ⚠️ Importante 
 <div>
 🎲 Para executar o Back End (server) deste projeto você pode encontrar mais informações através deste link:
 
