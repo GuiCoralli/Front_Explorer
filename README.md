@@ -19,10 +19,9 @@ This is final course project, from the Rocketseat educational platform, simulate
   <a href="#-Functionalities">Functionalities</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Characteristics">Characteristics</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-How to run the project">How to run the project</a><br>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Running the Front End">Running the Front End </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Prerequisites">Prerequisites</a><br>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Important ">Important</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Running the Front End">Running the Front End</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Important">Important</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
 
@@ -80,9 +79,6 @@ ________________________________________________________________________________
 <br /><br />
 
 # 🚀 Technologies
-
-## Project developed with the following technologies:
-
 ## Project developed with the following technologies
 
 <div>
@@ -93,17 +89,9 @@ ________________________________________________________________________________
  	<img align="center" alt="Gui-REACT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
 </div>
 
-
 # 💻 Prerequisites
 
- Install the following tools on your machine:
-*[Git](https://git-scm.com);
-*[Node.js](https://nodejs.org/en/).
-
- It is important to have an editor to work with the code, such as:
-*[VSCode](https://code.visualstudio.com/).
-
-  Install the following tools on your machine 
+  Install the following tools on your machine: 
 - [x] [Git](https://git-scm.com)
 - [x] [Node.js](https://nodejs.org/en/)
 - [X] [Insomnia](https://insomnia.rest/download)
@@ -139,12 +127,14 @@ The default port for the Front End is 5173 - access <http://localhost:5173>
 <br /><br />
 
 
+
 ## ⚠️ Important 
 <div>
-     🎲 To run the the Back End (server) of this project you can find more information through this link: 
-
- - [x] https://github.com/GuiCoralli/backend-FoodExplorer
+	
+ 🎲 To run the the Back End (server) of this project you can find more information through this link: 
+  - [x] https://github.com/GuiCoralli/backend-FoodExplorer
 </div>
+
 
 ### Author
 ------------
