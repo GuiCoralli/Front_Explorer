@@ -10,8 +10,10 @@
 
 
 
-<p align="center">
-Este projeto de conclusão de curso, da plataforma educacional Rocketseat, simula um cardápio digital para um restaurante, feito por GuiCoralli para consolidar o aprendizado de tecnologias de aplicações WEB.
+<p align="left">
+	Descubra o FoodExplorer, uma aplicação Web que reune o melhor da culinária e programação. <br>
+	Este projeto final de curso, da plataforma educacional da <a href="https://app.rocketseat.com.br">Rocketseat</a>, simula um cardápio digital para um restaurante.<br> 
+	O FoodExplorer é uma 	ótima experiência que converge de maneira criativa entre duas áreas distintas como a gastronomia e a tecnologia.
 </p>
 
 
@@ -52,9 +54,18 @@ ________________________________________________________________________________
 
 
 # 📄 Sobre o Projeto
-<div>
-	Descubra o FoodExplorer, uma aplicação Web que reune o melhor da culinária e programação. <br>
-	Este projeto final de curso, da plataforma educacional da <a href="https://app.rocketseat.com.br">Rocketseat</a>, simula um cardápio digital para um restaurante.<br> 	O FoodExplorer é uma ótima experiência que converge de maneira criativa entre duas áreas distintas como a gastronomia e a tecnologia.
+<div>	
+O Food Explorer funciona como um menu de restaurante on-line que você pode visualizar no seu celular ou computador.<br>
+Todo o processo foi feito do início ao fim usando recursos especiais de computador, mas você não precisa entender tudo. <br>
+No cardápio, há duas “pessoas”. O primeiro é o Chef do restaurante, a quem chamamos de <strong>"admin"</strong>.
+
+<br> O Chef pode fazer coisas como criar comida, verificar a comida que já existe, mudar alguma coisa e, se quiser, até retirar aquele prato que não fez muito sucesso. Cada alimento tem uma foto linda, um nome, uma categoria, uma descrição rápida, os ingredientes e quanto custa. <br>
+Quando o Chef acrescenta novos alimentos, o menu diz “Parabéns!” e retorne à página principal.
+
+A segunda pessoa é “você”, que chamamos de <strong>“usuário” </strong>, que quer apenas ver e escolher a comida. <br> Você pode ver toda a comida que o Chef preparou e, se alguma chamar sua atenção, você pode clicar nela e pedir no restaurante. <br> Ao clicar, o menu mostra mais informações sobre aquele alimento em uma nova página, como se fosse uma história sobre ele.<br>
+
+Food Explorer é como um menu mágico na internet. O Chef prepara a comida e você escolhe quais quer experimentar!
+ 
 </div>
 
 # 📌 Acesse o Food Explorer
