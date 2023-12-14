@@ -75,6 +75,7 @@ ________________________________________________________________________________
 #  Características
 - [x] Responsividade
 - [x] Modo claro/escuro
+- [x] Modo administrador/usuário
 <br /><br />
 
 # 🚀 Tecnologias
