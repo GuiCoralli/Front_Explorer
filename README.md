@@ -96,7 +96,7 @@ ________________________________________________________________________________
 - [x] [Node.js](https://nodejs.org/en/)
 - [X] [Insomnia](https://insomnia.rest/download)
 
-  It is important to have an editor to work with the code, such as:
+It is important to have an editor to work with the code, such as:
 - [x] [VSCode](https://code.visualstudio.com/)
 <br/>
 
