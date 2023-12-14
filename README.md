@@ -76,7 +76,7 @@ ________________________________________________________________________________
 # ⚙️ Characteristics
 - [x] Responsiveness
 - [x] Light/dark mode
-- [x] Admin mode/user mode 
+- [x] Admin/user mode 
 <br /><br />
 
 # 🚀 Technologies
