@@ -10,21 +10,21 @@
 
 <div>
 <p align="justify">
-	Discover FoodExplorer, a web application that brings together the best of cooking and programming.This final course project, from the <a href="https://app.rocketseat.com.br">Rocketseat</a> educational platform, simulates a digital menu for a restaurant.
-	FoodExplorer is a great experience that creatively converges between two distinct areas such as gastronomy and technology.
+	Discover Food Explorer, a web application that brings together the best of cooking and programming.
+	This final course project from the educational platform <a href="https://app.rocketseat.com.br">Rocketseat</a> simulates a digital menu for a restaurant. Food Explorer is a great experience that creatively converges two distinct areas, such as gastronomy and technology.
 </p>
 <div>
 
 ## Navigation
 
 <p align="center">
-  <a href="#-About">About the Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Access">Access Food Explorer</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-About The Project">About the Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Access Food Explorer">Access Food Explorer</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Functionalities">Functionalities</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Characteristics">Characteristics</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Prerequisites">Prerequisites</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Running">Running the Front End</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Prerequisites">Prerequisites</a><br>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Running The Front End">Running the Front End</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Important">Important</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
@@ -47,13 +47,11 @@ ________________________________________________________________________________
 
 <div>
 
-Food Explorer works like an online restaurant menu that you can view on your cell phone and/or computer.<br> All development of the application was done using advanced computer code resources, but I will explain it in a different way. <br> It is possible to simulate two different environments while using the application.
+Food Explorer works like an online restaurant menu and can be accessed via cell phone and/or computer.<br> Although the entire development of the application was carried out using advanced computer code resources, I will explain it in a simpler way. From the moment the application starts, it is possible to simulate two environments:
 
-The first environment is the administrative part of the restaurant, which we call <strong>"admin"</strong>.<br> In this environment, the restaurant owner is responsible for maintaining the menu and online orders.<br>
-You can add, change and check if there are already foods, drinks and desserts.
+The administrative part of the restaurant, which we call <strong>"admin"</strong>.<br> In this profile, the restaurant owner is responsible for maintaining the menu and online orders.<br> You can add and change items menu such as: meals, drinks and desserts.
 
-The second environment is “you”, which we call <strong>“user” </strong>, where you can view the food available and choose, clicking and placing the order at the restaurant. When clicked, the menu shows the order history and more information about that food on a new page.
-
+The other environment is the customer's view that we call <strong>“user”</strong>. Some of the features within this profile are: obtain more product information by clicking on the item, including it in the order and choosing between payment methods.
 </div>
 
 
@@ -72,12 +70,14 @@ The second environment is “you”, which we call <strong>“user” </strong>,
 	👉🏼 https://corallifoodexplorer.netlify.app/
 
 	
- ### admin
+ ## Você pode acessar com:
+	
+  ### admin
 
 - [x] Login: admin@email.com
 - [x] Password: 123456
 
- ### User 
+ ### user 
 
 - [x] Login: example@email.com
 - [x] Password: 123456
