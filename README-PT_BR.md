@@ -46,8 +46,7 @@ O Food Explorer funciona como um cardápio de restaurante online, podendo ser ac
 
 A parte administrativa do restaurante, que chamamos de <strong>"admin"</strong>.<br> Neste perfil, o dono do restaurante é responsável pela manutenção do cardápio e dos pedidos online.<br> Você pode adicionar e alterar itens do menu como: refeições, bebidas e sobremesas.
 
-O outro ambiente é a visão do cliente que chamamos de <strong>“usuário”</strong>, onde você pode visualizar as opções e escolher-as, clicando e fazendo o pedido no restaurante. Ao clicar em um item do menu, mostra o histórico de pedidos e mais informações sobre aquele alimento em uma nova página.
-
+O outro ambiente é a visão do cliente que chamamos de <strong>“usuário”</strong>. Algumas das funcionalidades dentro deste perfil são: obter mais informações do produto ao clicar no item, incluir no pedido e escolher entre as formas de pagamento. 
 </div>
 
 
@@ -65,12 +64,14 @@ O outro ambiente é a visão do cliente que chamamos de <strong>“usuário”</
 <div>
 	👉🏼 https://corallifoodexplorer.netlify.app/
  
+## Você pode acessar com:
+	
   ### admin
 
 - [x] Login: admin@email.com
 - [x] Password: 123456
 
- ### User
+ ### usuário
 
 - [x] Login: example@email.com
 - [x] Password: 123456
@@ -108,7 +109,7 @@ Projeto desenvolvido com as seguintes tecnologias:
  </div>
 
 # 💻 Pré-requisitos
-Instalar em sua máquina as seguintes ferramentas:
+Instale em sua máquina as seguintes ferramentas:
 - [x] [Git](https://git-scm.com)
 - [x] [Node.js](https://nodejs.org/en/)
 - [X] [Insomnia](https://insomnia.rest/download)
@@ -144,7 +145,7 @@ A porta padrão para o Front End é 5173 - acesse <http://localhost:5173>
 
 # ⚠️ Importante 
 <div>
-🎲 Para executar o Back End (server) deste projeto você pode encontrar mais informações através deste link:
+🎲 Para executar o Back End (server) deste projeto, você pode encontrar mais informações por meio do link:
 
 - [x]  https://github.com/GuiCoralli/backend-FoodExplorer
 </div>
