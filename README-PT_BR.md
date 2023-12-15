@@ -2,7 +2,7 @@
 
 
 <p align="center">
-	  <img alt="Project status" src="https://img.shields.io/badge/Status-Finalizado-green">
+	  <img alt="Project status" src="https://img.shields.io/badge/Status-em construção-orange">
 	  <img alt="GitHub last commit (by committer)" src="https://img.shields.io/github/last-commit/GuiCoralli/frontend-FoodExplorer">
 	  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/GuiCoralli/frontend-FoodExplorer">
 	  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/GuiCoralli/frontend-FoodExplorer?style=social">
@@ -60,18 +60,21 @@ O outro ambiente é a visão do cliente que chamamos de <strong>“usuário”</
 </div>
 	
 
-# 📌 Acesse o Food Explorer
+# 📌 Acesso
 <div>
 	👉🏼 https://corallifoodexplorer.netlify.app/
- 
-## Você pode acessar com:
+</div>
 	
-  ### admin
+
+<br> 
+Você pode acessar com:
+	
+### admin
 
 - [x] Login: admin@email.com
 - [x] Password: 123456
 
- ### usuário
+### usuário
 
 - [x] Login: example@email.com
 - [x] Password: 123456
