@@ -10,12 +10,12 @@
 
 
 <p align="justify">
-	Descubra o FoodExplorer, uma aplicação Web que reune o melhor da culinária e programação. 
-	Este projeto final de curso, da plataforma educacional da <a href="https://app.rocketseat.com.br">Rocketseat</a>, simula um cardápio digital para um restaurante. 
-	O FoodExplorer é uma ótima experiência que converge de maneira criativa entre duas áreas distintas como a gastronomia e a tecnologia.
+	Descubra o Food Explorer, uma aplicação web que reúne o melhor da culinária e programação. 
+	Este projeto final de curso da plataforma educacional <a href="https://app.rocketseat.com.br">Rocketseat</a> simula um cardápio digital para um restaurante. 
+	O Food Explorer é uma ótima experiência que converge de maneira criativa duas áreas distintas, como a gastronomia e a tecnologia.
 </p>
 
-## Menu
+## Navegação
 <p align="center">
   <a href="#-Sobre o Projeto">Sobre o Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Acesse o Food Explorer">Acesse o Food Explorer</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -42,12 +42,11 @@ ________________________________________________________________________________
 # 📄 Sobre o Projeto
 <div>
 	
-O Food Explorer funciona como um cardápio de restaurante online que você pode visualizar no seu celular e/ou computador.<br> Todo o desenvolvimento do aplicativo foi feito utilizando recursos avançados de código computacional, mas vou explicar de uma forma diferente. É possível simular dois ambientes diferentes durante a utilização do aplicativo.
+O Food Explorer funciona como um cardápio de restaurante online, podendo ser acessado pelo celular e/ou computador.<br> Embora todo o desenvolvimento do aplicativo tenha sido realizado utilizando recursos avançados de código computacional, explicarei de uma forma mais simples. A partir do momento que a aplicação é iniciada, é possível simular dois ambientes:
 
-O primeiro ambiente é a parte administrativa do restaurante, que chamamos de <strong>"admin"</strong>.<br> Neste ambiente, o dono do restaurante é responsável pela manutenção do cardápio e dos pedidos online.<br>
-Você pode adicionar, alterar e verificar se já existem alimentos, bebidas e sobremesas.
+A parte administrativa do restaurante, que chamamos de <strong>"admin"</strong>.<br> Neste perfil, o dono do restaurante é responsável pela manutenção do cardápio e dos pedidos online.<br> Você pode adicionar e alterar itens do menu como: refeições, bebidas e sobremesas.
 
-O segundo ambiente é “você” que chamamos de <strong>“usuário” </strong>, onde você pode visualizar a comida disponível e escolher, clicando e fazendo o pedido no restaurante. Ao clicar, o menu mostra o histórico de pedidos e mais informações sobre aquele alimento em uma nova página.
+O outro ambiente é a visão do cliente que chamamos de <strong>“usuário”</strong>, onde você pode visualizar as opções e escolher-as, clicando e fazendo o pedido no restaurante. Ao clicar em um item do menu, mostra o histórico de pedidos e mais informações sobre aquele alimento em uma nova página.
 
 </div>
 
@@ -65,7 +64,7 @@ O segundo ambiente é “você” que chamamos de <strong>“usuário” </stron
 # 📌 Acesse o Food Explorer
 <div>
 	👉🏼 https://corallifoodexplorer.netlify.app/
-
+ 
   ### admin
 
 - [x] Login: admin@email.com
