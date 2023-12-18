@@ -17,8 +17,8 @@
 
 ## Navegação
 <p align="center">
-  <a href="#-Sobre o Projeto">Sobre o Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Acesse o Food Explorer">Acesse o Food Explorer</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Acesse">Acesse</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Características">Características</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Tecnologias">Tecnologias</a><br>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -39,7 +39,7 @@
 _____________________________________________________________________________________
 
 
-# 📄 Sobre o Projeto
+# 📄 Projeto
 
 	
 O Food Explorer funciona como um cardápio de restaurante online, podendo ser acessado pelo celular e/ou computador.<br> Embora todo o desenvolvimento do aplicativo tenha sido realizado utilizando recursos avançados de código computacional, explicarei de uma forma mais simples. A partir do momento que a aplicação é iniciada, é possível simular dois ambientes:
