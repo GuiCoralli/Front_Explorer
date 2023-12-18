@@ -152,10 +152,12 @@ The default port for the Front End is 5173 - access <http://localhost:5173>
 
 
 # ⚠️ Important 
+
 <div>
 	
  🎲 To run the the Back End (server) of this project you can find more information through this link: 
   - [x] https://github.com/GuiCoralli/backend-FoodExplorer
+
 </div>
 
 
