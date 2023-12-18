@@ -31,23 +31,6 @@
 
 
 
-## Navigation
-
-<p align="center">
- 
-   [Project](#project) | [Access](#access) | [Functionalities](#functionalities) | [Characteristics](#characteristics) | [Technologies](#technologies) | [Prerequisites](#prerequisites) | [Running the Front End](#running-the-front-end) | [Important](#important) 
- 
-</p>
-
-
-
-
-
-
-
-
-
-
  ## Translation 
  <p align="center">
    ·
