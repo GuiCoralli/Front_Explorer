@@ -40,15 +40,13 @@ ________________________________________________________________________________
 
 
 # 📄 Sobre o Projeto
-<div>
+
 	
 O Food Explorer funciona como um cardápio de restaurante online, podendo ser acessado pelo celular e/ou computador.<br> Embora todo o desenvolvimento do aplicativo tenha sido realizado utilizando recursos avançados de código computacional, explicarei de uma forma mais simples. A partir do momento que a aplicação é iniciada, é possível simular dois ambientes:
 
 A parte administrativa do restaurante, que chamamos de <strong>"admin"</strong>.<br> Neste perfil, o dono do restaurante é responsável pela manutenção do cardápio e dos pedidos online.<br> Você pode adicionar e alterar itens do menu como: refeições, bebidas e sobremesas.
 
 O outro ambiente é a visão do cliente que chamamos de <strong>“usuário”</strong>. Algumas das funcionalidades dentro deste perfil são: obter mais informações do produto ao clicar no item, incluir no pedido e escolher entre as formas de pagamento. 
-</div>
-
 
 
 
