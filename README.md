@@ -43,7 +43,7 @@
 _____________________________________________________________________________________
 
 
-# 📄 About the Project
+# 📄 Project
 
 <div>
 
@@ -52,6 +52,7 @@ Food Explorer works like an online restaurant menu and can be accessed via cell 
 The administrative part of the restaurant, which we call <strong>"admin"</strong>.<br> In this profile, the restaurant owner is responsible for maintaining the menu and online orders.<br> You can add and change items menu such as: meals, drinks and desserts.
 
 The other environment is the customer's view that we call <strong>“user”</strong>. Some of the features within this profile are: obtain more product information by clicking on the item, including it in the order and choosing between payment methods.
+
 </div>
 
 
