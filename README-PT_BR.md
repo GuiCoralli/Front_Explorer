@@ -90,7 +90,7 @@ Você pode acessar com:
 - [x] Alteração do status dos pedidos (administrador)
 
 
-#  Características
+# ⚙️ Características
 - [x] Responsividade
 - [x] Modo claro/escuro
 - [x] Modo administrador/usuário
@@ -119,7 +119,7 @@ Instale em sua máquina as seguintes ferramentas:
 - [x] [VSCode](https://code.visualstudio.com/)
 
 
-# 🎲 Rodando o Frontend
+# 🔄✅ Rodando o Frontend
 
 Clone o repositório:
 ```
