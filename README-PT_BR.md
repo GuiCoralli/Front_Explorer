@@ -146,8 +146,8 @@ A porta padrão para o Frontend é 5173 - acesse <http://localhost:5173>
 
 # ⚠️ Importante 
 <div>
-🎲 Para executar o Backend (server) deste projeto, você pode encontrar mais informações por meio do link:
-
+	
+- [x] Para executar o Backend (server) deste projeto, você pode encontrar mais informações por meio do link:
 - [x]  https://github.com/GuiCoralli/backend-FoodExplorer
 </div>
 
