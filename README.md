@@ -62,10 +62,7 @@ The other environment is the customer's view that we call <strong>“user”</st
 
 
 <div align="center">
-
-	
- <img width="750" height="550" title="Layout" src="https://github.com/GuiCoralli/frontend-FoodExplorer/assets/134714337/a87d292c-06a3-46f1-bce9-0c497d620d45"/>
-	
+<img width="750" height="550" title="Layout" src="https://github.com/GuiCoralli/frontend-FoodExplorer/assets/134714337/a87d292c-06a3-46f1-bce9-0c497d620d45"/>
 </div>
 
 
