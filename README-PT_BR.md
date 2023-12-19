@@ -36,6 +36,7 @@
   <a href="https://github.com/GuiCoralli/frontend-FoodExplorer/blob/main/README.md"> English
   </a>
 
+
 _____________________________________________________________________________________
 
 
@@ -50,7 +51,7 @@ O outro ambiente é a visão do cliente que chamamos de <strong>“usuário”</
 
 
 
-# 🎥 Layout
+## 🎥 Layout
 
 <div align="center">
 <img width="750" height="550" title="Layout" src="https://github.com/GuiCoralli/frontend-FoodExplorer/assets/134714337/a87d292c-06a3-46f1-bce9-0c497d620d45"/>
