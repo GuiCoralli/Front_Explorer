@@ -18,7 +18,7 @@
 ## Navegação
 <p align="center">
   <a href="#-Projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Acesse">Acesse</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Acesso">Acesso</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Características">Características</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Tecnologias">Tecnologias</a><br>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -36,6 +36,7 @@
   <a href="https://github.com/GuiCoralli/frontend-FoodExplorer/blob/main/README.md"> English
   </a>
 
+
 _____________________________________________________________________________________
 
 
@@ -50,7 +51,7 @@ O outro ambiente é a visão do cliente que chamamos de <strong>“usuário”</
 
 
 
-# 🎥 Layout
+## 🎥 Layout
 
 <div align="center">
 <img width="750" height="550" title="Layout" src="https://github.com/GuiCoralli/frontend-FoodExplorer/assets/134714337/a87d292c-06a3-46f1-bce9-0c497d620d45"/>
@@ -90,7 +91,7 @@ Você pode acessar com:
 - [x] Alteração do status dos pedidos (administrador)
 
 
-#  Características
+# ⚙️ Características
 - [x] Responsividade
 - [x] Modo claro/escuro
 - [x] Modo administrador/usuário
@@ -119,7 +120,7 @@ Instale em sua máquina as seguintes ferramentas:
 - [x] [VSCode](https://code.visualstudio.com/)
 
 
-# 🎲 Rodando o Frontend
+# 🔄✅ Rodando o Frontend
 
 Clone o repositório:
 ```
@@ -146,8 +147,8 @@ A porta padrão para o Frontend é 5173 - acesse <http://localhost:5173>
 
 # ⚠️ Importante 
 <div>
-🎲 Para executar o Backend (server) deste projeto, você pode encontrar mais informações por meio do link:
-
+	
+- [x] Para executar o Backend (server) deste projeto, você pode encontrar mais informações por meio do link:
 - [x]  https://github.com/GuiCoralli/backend-FoodExplorer
 </div>
 

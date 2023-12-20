@@ -62,8 +62,10 @@ The other environment is the customer's view that we call <strong>“user”</st
 
 
 <div align="center">
-<img width="750" height="550" title="Layout" src="https://github.com/GuiCoralli/frontend-FoodExplorer/assets/134714337/a87d292c-06a3-46f1-bce9-0c497d620d45"/>
+
 	
+ <img width="750" height="550" title="Layout" src="https://github.com/GuiCoralli/frontend-FoodExplorer/assets/134714337/a87d292c-06a3-46f1-bce9-0c497d620d45"/>
+
 </div>
 
 
@@ -157,7 +159,7 @@ The default port for the Frontend is 5173 - access <http://localhost:5173>
 
 <div>
 	
- 🎲 To run the the Backend (server) of this project you can find more information through this link: 
+  - [x] To run the the Backend (server) of this project you can find more information through this link: 
   - [x] https://github.com/GuiCoralli/backend-FoodExplorer
 
 </div>
@@ -173,4 +175,4 @@ The default port for the Frontend is 5173 - access <http://localhost:5173>
 💡 Created by Guilherme Coralli. 
 
 👋🏽 Get in touch!
-[![Linkedin Badge](https://img.shields.io/badge/LinkedIn-0077B5?logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/guicoralli/)](https://www.linkedin.com/in/guicoralli/) 
+[![Linkedin Badge](https://img.shields.io/badge/LinkedIn-0077B5?logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/guicoralli/)](https://www.linkedin.com/in/guicoralli/)
