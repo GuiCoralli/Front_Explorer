@@ -65,7 +65,7 @@ export const Container = styled.header`
     }
 `;
 
-export const ReceiptOrders = styled.div`
+export const ReceiptRequestOrders = styled.div`
     position: relative;
     margin-right: 0.6rem;
     display: flex;
@@ -74,7 +74,7 @@ export const ReceiptOrders = styled.div`
     font-size: 3.2rem;
 `;
 
-export const Order = styled.div`
+export const RequestOrder = styled.div`
     position: absolute;
     display: flex;
     align-items: center;

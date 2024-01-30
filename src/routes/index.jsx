@@ -8,34 +8,34 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { AuthRoutes } from './auth.routes';
-import { AdminRoutes } from './admin.routes';
+import { AdminAccessRoutes } from './admin.access.routes';
 import { UserRoutes } from './user.routes';
 import { RegisterRoutes } from './register.routes';
 
 export function Routes() {
-    const { user, isAdmin } = useAuth();
+    const { user, isAdminAccess } = useAuth();
     const [loaded, setLoaded] = useState(false);
-    const [adminExists, setAdminExists] = useState(false);
+    const [adminAccessExists, setAdminAccessExists] = useState(false);
 
     useEffect(() => {
-        async function checkIfAdminExists() {
+        async function checkIfAdminAccessExists() {
             try {
-                const response = await api.get("/admin");
+                const response = await api.get("/adminaccess");
 
                 if (response.data) {
-                    setAdminExists(true);
+                    setAdminAccessExists(true);
                 } else {
-                    setAdminExists(false);
+                    setAdminAccessExists(false);
                 };
 
                 setLoaded(true);
             } catch (error) {
-                console.error("Ocorreu um erro ao verificar se existe um administrador:", error);
-                toast("Ocorreu um erro ao verificar se existe um administrador. Por favor, tente novamente.");
+                console.error("Erro ao verificar se o administrador existe:", error);
+                toast("Erro ao verificar se existe um administrador, tente novamente.");
             };
         };
 
-        checkIfAdminExists();
+        checkIfAdminAccessExists();
     }, []);
 
     if (!loaded) {
@@ -61,8 +61,8 @@ export function Routes() {
     return (
         <BrowserRouter>
             {
-                adminExists ? (
-                    user ? (isAdmin ? <AdminRoutes /> : <UserRoutes />) : <AuthRoutes />
+                adminAccessExists ? (
+                    user ? (isAdminAccess ? <AdminAccessRoutes /> : <UserRoutes />) : <AuthRoutes />
                 ) : (
                     <RegisterRoutes />
                 )

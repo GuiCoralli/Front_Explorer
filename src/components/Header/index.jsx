@@ -7,34 +7,34 @@ import { api } from '../../services/api';
 import { TfiReceipt, TfiUser, TfiHeart } from 'react-icons/tfi';
 import { FiLogOut } from 'react-icons/fi';
 
-import { Brand } from '../Brand';
+import defaultPlate from '../../../src/assets/plate.svg';
+import { Trademark }  from '../Trademark';
 import { Input } from '../Input';
 import { Button } from '../Button';
 import { Menu } from '../Menu';
 import { ItemMenu } from '../ItemMenu';
-import defaultDish from '../../../src/assets/dish.svg';
 
-import { Container, ReceiptOrders, Order, Profile, ProfileMenu, ProfileMenuOptions, SearchList } from './styles';
+import { Container, ReceiptRequestOrders, RequestOrder, Profile, ProfileMenu, ProfileMenuOptions, SearchList } from './styles';
 
 export function Header(props) {
-    const { signOut, user, isAdmin } = useAuth();
+    const { signOut, user, isAdminAccess } = useAuth();
 
     const navigate = useNavigate();
 
-    const { setItemSearch, page, orderItems, totalOrder } = props;
+    const { setItemSearch, page, requestOrderItems, totalRequestOrder } = props;
 
-    const [dishes, setDishes] = useState([]);
-    const [totalAmount, setTotalAmount] = useState(0);
+    const [plates, setPlates] = useState([]);
+    const [totalQuantity, setTotalQuantity] = useState(0);
 
     const avatarUrl = `${api.defaults.baseURL}/files/${user.avatar}`;
     const avatarStyle = { backgroundImage: user.avatar ? `url(${avatarUrl})` : 'none' };
 
-    const queryWidth = 1050;
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const querySizeWidth = 1050;
+    const [windowSizeWidth, setWindowSizeWidth] = useState(window.innerWidth);
     const [isProfileMenuVisible, setIsProfileMenuVisible] = useState(false);
 
     const [search, setSearch] = useState("");
-    const [hasSearchPlaceholder, setHasSearchPlaceholder] = useState(false);
+    const [hasSearchButton, setHasSearchButton] = useState(false);
     const [filteredSearch, setFilteredSearch] = useState([]);
 
     const profileMenuRef = useRef(null);
@@ -46,15 +46,15 @@ export function Header(props) {
         signOut();
     };
 
-    function handleDish(id) {
+    function handlePlate(id) {
         const pageNameAndId = window.location.pathname.split("/");
 
-        navigate(`/dish/${id}`);
+        navigate(`/plate/${id}`);
 
-        if (pageNameAndId[1] === "dish" && pageNameAndId[2] !== id.toString()) {
+        if (pageNameAndId[1] === "plate" && pageNameAndId[2] !== id.toString()) {
             window.location.reload();
         } else {
-            document.querySelector("#searchDishes").value = "";
+            document.querySelector("#searchPlates").value = "";
             setSearch("");
         };
     };
@@ -89,7 +89,7 @@ export function Header(props) {
     }, []);
 
     useEffect(() => {
-        setHasSearchPlaceholder(!search);
+        setHasSearchButton(!search);
     }, [search]);
 
     useEffect(() => {
@@ -97,45 +97,45 @@ export function Header(props) {
             setItemSearch(search);
         };
 
-        function filterDishesByNameOrIngredient(searchQuery) {
+        function filterPlatesByNameOrIngredient(searchQuery) {
             searchQuery = searchQuery.toLowerCase();
 
-            var filteredDishes = dishes.filter(function (dish) {
-                if (dish.name.toLowerCase().includes(searchQuery)) {
+            var filteredPlates = plates.filter(function (plate) {
+                if (plate.name.toLowerCase().includes(searchQuery)) {
                     return true;
                 };
 
-                var foundIngredient = dish.ingredients.find(function (ingredient) {
+                var foundIngredient = plate.ingredients.find(function (ingredient) {
                     return ingredient.name.toLowerCase().includes(searchQuery);
                 });
 
                 return !!foundIngredient;
             });
 
-            return filteredDishes;
+            return filteredPlates;
         };
 
-        var searchResult = filterDishesByNameOrIngredient(search);
+        var searchResult = filterPlatesByNameOrIngredient(search);
         setFilteredSearch(searchResult);
     }, [search]);
 
     useEffect(() => {
-        async function fetchDishes() {
+        async function fetchPlates() {
             try {
-                const response = await api.get("/dishes");
-                setDishes(response.data);
+                const response = await api.get("/plates");
+                setPlates(response.data);
             } catch (error) {
                 console.error("Erro ao buscar pratos: ", error);
-                toast("Erro ao buscar os pratos. Por favor, tente novamente.");
+                toast("Erro ao buscar os pratos, tente novamente.");
             };
         };
 
-        fetchDishes();
+        fetchPlates();
 
         function handleResize() {
-            setWindowWidth(window.innerWidth);
+            setWindowSizeWidth(window.innerWidth);
 
-            if (window.innerWidth < queryWidth) {
+            if (window.innerWidth < querySizeWidth) {
                 setIsProfileMenuVisible(false);
                 setSearch("");
             };
@@ -149,33 +149,33 @@ export function Header(props) {
     }, []);
 
     useEffect(() => {
-        const oldItems = JSON.parse(localStorage.getItem("@foodexplorer:order"));
+        const oldItems = JSON.parse(localStorage.getItem("@foodexplorer:requestorder"));
 
-        if (oldItems && oldItems.dishes) {
+        if (oldItems && oldItems.plates) {
             let total = 0;
 
-            for (const dish of oldItems.dishes) {
-                if (dish.amount) {
-                    total += dish.amount;
+            for (const plate of oldItems.plates) {
+                if (plate.quantity) {
+                    total += plate.quantity;
                 };
             };
-            setTotalAmount(total);
+            setTotalQuantity(total);
         } else {
-            setTotalAmount(orderItems);
+            setTotalQuantity(requestOrderItems);
         };
 
-    }, [orderItems, totalOrder]);
+    }, [requestOrderItems, totalRequestOrder]);
 
     return (
         <Container>
             <Menu />
-            <Link to="/"><Brand isAdmin={isAdmin} /></Link>
-            {windowWidth >= queryWidth && (
+            <Link to="/"><Trademark  isAdminAccess={isAdminAccess} /> </Link>
+            {windowSizeWidth >= querySizeWidth && (
                 <Input
-                    id="searchDishes"
+                    id="searchPlates"
                     type="text"
                     onChange={(e) => setSearch(e.target.value)}
-                    aria-label="Busque por pratos ou ingredientes"
+                    aria-label="Buscar por pratos ou Ingredientes"
                     searchPlaceholder={hasSearchPlaceholder}
                     value={search}
                 >
@@ -183,16 +183,16 @@ export function Header(props) {
                         search && filteredSearch.length > 0 && page !== "home" &&
                         <SearchList>
                             {
-                                filteredSearch.map(dish =>
-                                    <div key={dish.id} onClick={() => handleDish(dish.id)}>
+                                filteredSearch.map(plate =>
+                                    <div key={plates.id} onClick={() => handlePlate(plate.id)}>
                                         {
-                                            dish.image ? (
-                                                <img src={`${api.defaults.baseURL}/files/${dish.image}`} />
+                                            plate.image ? (
+                                                <img src={`${api.defaults.baseURL}/files/${plate.image}`} />
                                             ) : (
-                                                <img src={defaultDish} />
+                                                <img src={defaultPlate} />
                                             )
                                         }
-                                        <span>{dish.name}</span>
+                                        <span>{plate.name}</span>
                                     </div>
                                 )
                             }
@@ -200,37 +200,37 @@ export function Header(props) {
                     }
                     {
                         search && filteredSearch.length === 0 && page !== "home" &&
-                        <SearchList><span>Nenhum resultado encontrado!</span></SearchList>
+                        <SearchList><span>Não foi encontrado nenhum resultado!</span></SearchList>
                     }
                 </Input>
             )}
-            {windowWidth >= queryWidth ? (
-                isAdmin ? (
+            {windowSizeWidth >= querySizeWidth ? (
+                isAdminAccess ? (
                     <Link to="/add">
                         <Button>
                             Novo prato
                         </Button>
                     </Link>
                 ) : (
-                    <Link to="/payment">
+                    <Link to="/requestPayment">
                         <Button>
-                            <TfiReceipt />{`Pedido (${totalAmount})`}
+                            <TfiReceipt />{`Pedido (${totalQuantity})`}
                         </Button>
                     </Link>
                 )
             ) : (
-                isAdmin ? null : (
-                    <Link to="/payment">
-                        <ReceiptOrders>
+                isAdminAccess ? null : (
+                    <Link to="/requestPayment">
+                        <ReceiptRequestOrders>
                             <TfiReceipt />
-                            <Order>
-                                {totalAmount}
-                            </Order>
-                        </ReceiptOrders>
+                            <RequestOrder>
+                                {totalQuantity}
+                            </RequestOrder>
+                        </ReceiptRequestOrders>
                     </Link>
                 )
             )}
-            {windowWidth >= queryWidth && (
+            {windowSizeWidth >= querySizeWidth && (
                 <Profile
                     ref={profileRef}
                     style={avatarStyle}
@@ -246,14 +246,14 @@ export function Header(props) {
                 className={`profile-menu ${isProfileMenuVisible ? 'profile-menu-visible' : 'profile-menu-transition'}`}
             >
                 <ProfileMenuOptions>
-                    <Link to="/orders">
+                    <Link to="/requestorders">
                         {
-                            isAdmin ? <ItemMenu icon={TfiReceipt} title="Pedidos" /> : <ItemMenu icon={TfiReceipt} title="Meus pedidos" />
+                            isAdminAccess ? <ItemMenu icon={TfiReceipt} title="Pedidos" /> : <ItemMenu icon={TfiReceipt} title="Meus pedidos" />
                         }
                     </Link>
                     {
-                        !isAdmin &&
-                        <Link to="/favorites"><ItemMenu icon={TfiHeart} title="Favoritos" /></Link>
+                        !isAdminAccess &&
+                        <Link to="/preferences"><ItemMenu icon={TfiHeart} title="Preferidos" /></Link>
                     }
                     <Link to="/profile"><ItemMenu icon={TfiUser} title="Atualizar dados" /></Link>
                     <ItemMenu

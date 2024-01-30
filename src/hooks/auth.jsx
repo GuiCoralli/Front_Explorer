@@ -14,8 +14,8 @@ function AuthProvider({ children }) {
     async function signIn({ email, password }) {
         try {
             const response = await api.post("/sessions", { email, password });
-            const { user, token, isAdmin } = response.data;
-            let order = {};
+            const { user, token, isAdminAccess } = response.data;
+            let requestorder = {};
 
             const userLocalStorage = {
                 id: user.id,
@@ -27,25 +27,25 @@ function AuthProvider({ children }) {
             localStorage.setItem("@foodexplorer:user", JSON.stringify(userLocalStorage));
             localStorage.setItem("@foodexplorer:token", token);
 
-            if (!isAdmin) {
-                const storageOrder = JSON.parse(localStorage.getItem("@foodexplorer:order"));
+            if (!isAdminAccess) {
+                const storageRequestOrder = JSON.parse(localStorage.getItem("@foodexplorer:requestorder"));
 
-                if (storageOrder && storageOrder.user_id === user.id) {
-                    order = storageOrder;
+                if (storageRequestOrder && storageRequestOrder.user_id === user.id) {
+                    requestorder = storageRequestOrder;
                 } else {
-                    order = {
+                    requestorder = {
                         user_id: user.id,
                         status: "aberto",
-                        dishes: []
+                        plates: []
                     };
 
-                    localStorage.setItem("@foodexplorer:order", JSON.stringify(order));
+                    localStorage.setItem("@foodexplorer:requestorder", JSON.stringify(requestorder));
                 };
             };
 
             api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
-            setData({ user, token, isAdmin, order });
+            setData({ user, token, isAdminAccess, requestorder });
 
         } catch (error) {
             if (error.response) {
@@ -53,7 +53,7 @@ function AuthProvider({ children }) {
                 toast(error.response.data.message);
             } else {
                 console.error("Erro ao fazer login: ", error);
-                toast("Não foi possível entrar. Por favor, tente novamente.");
+                toast("Não foi possível realizar seu login, tente novamente.");
             };
         };
     };
@@ -65,7 +65,7 @@ function AuthProvider({ children }) {
         setData({});
     };
 
-    async function updateProfile({ user, avatarFile, isAdmin, order }) {
+    async function updateProfile({ user, avatarFile, isAdminAccess, requestorder }) {
         try {
             if (avatarFile) {
                 const fileUploadForm = new FormData();
@@ -86,8 +86,8 @@ function AuthProvider({ children }) {
 
             localStorage.setItem("@foodexplorer:user", JSON.stringify(userLocalStorage));
 
-            setData({ user, token: data.token, isAdmin, order });
-            toast("Perfil atualizado!");
+            setData({ user, token: data.token, isAdminAccess, requestorder });
+            toast("Perfil atualizado com sucesso!");
 
         } catch (error) {
             if (error.response) {
@@ -95,7 +95,7 @@ function AuthProvider({ children }) {
                 toast(error.response.data.message);
             } else {
                 console.error("Erro ao atualizar o perfil: ", error);
-                toast("Não foi possível atualizar o perfil. Por favor, tente novamente.");
+                toast("Perfil do usuário não atualizado. Por favor, tente novamente.");
             }
         };
     };
@@ -103,19 +103,19 @@ function AuthProvider({ children }) {
     useEffect(() => {
         const token = localStorage.getItem("@foodexplorer:token");
         const user = localStorage.getItem("@foodexplorer:user");
-        const order = localStorage.getItem("@foodexplorer:order");
+        const requestorder = localStorage.getItem("@foodexplorer:requestorder");
 
         if (token && user) {
             api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
             const decodedToken = jwt_decode(token);
-            const isAdmin = decodedToken.isAdmin;
+            const isAdminAccess = decodedToken.isAdminAccess;
 
             setData({
                 token,
                 user: JSON.parse(user),
-                isAdmin,
-                order: JSON.parse(order)
+                isAdminAccess,
+                requestorder: JSON.parse(requestorder)
             });
         };
 
@@ -127,8 +127,8 @@ function AuthProvider({ children }) {
             signOut,
             updateProfile,
             user: data.user,
-            isAdmin: data.isAdmin,
-            order: data.order
+            isAdminAccess: data.isAdminAccess,
+            requestorder: data.requestorder
         }}
         >
             {children}

@@ -1,21 +1,21 @@
 import { useState, useEffect } from 'react';
 
 export const themeConfig = () => {
-    const [theme, setTheme] = useState("themeDark");
+    const [theme, setThemeChange] = useState("themeDark");
 
-    const setMode = mode => {
+    const setModeTheme = mode => {
         window.localStorage.setItem("@foodexplorer:theme", mode);
-        setTheme(mode);
+        setThemeChange(mode);
     };
 
-    const toggleTheme = () => {
-        theme === "themeDark" ? setMode("themeLight") : setMode("themeDark");
+    const toggleThemeMode = () => {
+        theme === "themeDark" ? setModeTheme("themeLight") : setModeTheme("themeDark");
     };
 
     useEffect(() => {
-        const localTheme = window.localStorage.getItem("@foodexplorer:theme");
-        localTheme ? setTheme(localTheme) : setMode("themeDark");
+        const localThemeChange = window.localStorage.getItem("@foodexplorer:theme");
+        localThemeChange ? setModeTheme(localThemeChange) : setModeTheme("themeDark");
     }, []);
 
-    return { theme, toggleTheme };
+    return { theme, toggleThemeMode };
 };

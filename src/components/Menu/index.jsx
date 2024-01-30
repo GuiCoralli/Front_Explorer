@@ -9,16 +9,16 @@ import { TfiSearch, TfiUser } from 'react-icons/tfi';
 import { Input } from '../Input';
 import { ItemMenu } from '../ItemMenu';
 import { Footer } from '../Footer';
-import defaultDish from '../../../src/assets/dish.svg';
+import defaultPlate from '../../../src/assets/plate.svg';
 
-import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
 import { Container, IconMenu, TitleMenu, ExpandedMenu, ExpandedMenuOptions, Profile, SearchList } from './styles';
 
 export function Menu() {
-    const { signOut, user, isAdmin } = useAuth();
-    const navigate = useNavigate();
+    const { signOut, user, isAdminAccess } = useAuth();
+    const navigate = useNavigate()
 
     const avatarUrl = `${api.defaults.baseURL}/files/${user.avatar}`;
 
@@ -28,7 +28,7 @@ export function Menu() {
     const titleMenu = !isChecked ? "titleMenu hide" : "titleMenu";
     const expandedMenuRef = useRef(null);
     const [search, setSearch] = useState("");
-    const [dishes, setDishes] = useState([]);
+    const [plates, setPlates] = useState([]);
     const [filteredSearch, setFilteredSearch] = useState([]);
 
     function handleSignOut() {
@@ -58,12 +58,12 @@ export function Menu() {
         };
     };
 
-    function handleDish(id) {
+    function handlePlate(id) {
         const pageNameAndId = window.location.pathname.split("/");
 
-        navigate(`/dish/${id}`);
+        navigate(`/plate/${id}`);
 
-        if (pageNameAndId[1] === "dish" && pageNameAndId[2] !== id.toString()) {
+        if (pageNameAndId[1] === "plate" && pageNameAndId[2] !== id.toString()) {
             window.location.reload();
         } else {
             setIsChecked(false);
@@ -91,18 +91,18 @@ export function Menu() {
     }, []);
 
     useEffect(() => {
-        async function fetchDishes() {
+        async function fetchPlates() {
             try {
-                const response = await api.get(`/dishes?itemSearch=${search}`);
+                const response = await api.get(`/plates?itemSearch=${search}`);
 
-                setDishes(response.data);
+                setPlates(response.data);
             } catch (error) {
-                console.error("Não foi possível buscar os pratos: ", error);
-                toast("Não foi possível buscar os pratos. Por favor, tente novamente.");
+                console.error("Não foi possível buscar pelo prato desejado: ", error);
+                toast("Não foi possível buscar pelo prato desejado, tente novamente.");
             };
         };
 
-        fetchDishes();
+        fetchPlates();
     }, []);
 
     useEffect(() => {
@@ -114,25 +114,25 @@ export function Menu() {
     }, [isChecked]);
 
     useEffect(() => {
-        function filterDishesByNameOrIngredient(searchQuery) {
+        function filterfetchPlatesByNameOrIngredient(searchQuery) {
             searchQuery = searchQuery.toLowerCase();
 
-            var filteredDishes = dishes.filter(function (dish) {
-                if (dish.name.toLowerCase().includes(searchQuery)) {
+            var filteredPlates = plates.filter(function (plate) {
+                if (plate.name.toLowerCase().includes(searchQuery)) {
                     return true;
                 };
 
-                var foundIngredient = dish.ingredients.find(function (ingredient) {
+                var foundIngredient = plate.ingredients.find(function (ingredient) {
                     return ingredient.name.toLowerCase().includes(searchQuery);
                 });
 
                 return !!foundIngredient;
             });
 
-            return filteredDishes;
+            return filteredPlates;
         }
 
-        var searchResult = filterDishesByNameOrIngredient(search);
+        var searchResult = filterfetchPlatesByNameOrIngredient(search);
         setFilteredSearch(searchResult);
 
     }, [search]);
@@ -165,7 +165,7 @@ export function Menu() {
                 <ExpandedMenuOptions>
                     <Input
                         type="text"
-                        placeholder="Busque por pratos ou ingredientes"
+                        placeholder="Encontre seus pratos e ingredientes"
                         icon={TfiSearch}
                         onChange={(e) => setSearch(e.target.value)}
                     >
@@ -173,16 +173,16 @@ export function Menu() {
                             search && filteredSearch.length > 0 &&
                             <SearchList>
                                 {
-                                    filteredSearch.map(dish =>
-                                        <div key={dish.id} onClick={() => handleDish(dish.id)}>
+                                    filteredSearch.map(plate =>
+                                        <div key={plate.id} onClick={() => handlePlate(plate.id)}>
                                             {
-                                                dish.image ? (
-                                                    <img src={`${api.defaults.baseURL}/files/${dish.image}`} />
+                                                plate.image ? (
+                                                    <img src={`${api.defaults.baseURL}/files/${plate.image}`} />
                                                 ) : (
-                                                    <img src={defaultDish} />
+                                                    <img src={defaultPlate} />
                                                 )
                                             }
-                                            <span>{dish.name}</span>
+                                            <span>{plate.name}</span>
                                         </div>
                                     )
                                 }
@@ -193,17 +193,17 @@ export function Menu() {
                             <SearchList><span>Nenhum resultado encontrado!</span></SearchList>
                         }
                     </Input>
-                    <Link to="/orders" onClick={handleIconMenuClick}>
+                    <Link to="/requestorders" onClick={handleIconMenuClick}>
                         {
-                            isAdmin ? <ItemMenu title="Pedidos" /> : <ItemMenu title="Meus pedidos" />
+                            isAdminAccess ? <ItemMenu title="Pedidos" /> : <ItemMenu title="Meus pedidos" />
                         }
                     </Link>
-                    {isAdmin ? (
+                    {isAdminAccess ? (
                         <Link to="/add" onClick={handleIconMenuClick}>
                             <ItemMenu title="Novo prato" />
                         </Link>
                     ) : (
-                        <Link to="/favorites" onClick={handleIconMenuClick}><ItemMenu title="Favoritos" /></Link>
+                        <Link to="/preferences" onClick={handleIconMenuClick}><ItemMenu title="Preferidos" /></Link>
                     )}
                     <ItemMenu
                         title="Sair"

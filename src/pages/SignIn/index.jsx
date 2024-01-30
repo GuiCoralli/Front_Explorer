@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { useAuth } from '../../hooks/auth';
 
-import { Brand } from '../../components/Brand';
+import { Trademark } from '../../components/Trademark';
 import { Section } from '../../components/Section';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
@@ -62,7 +62,7 @@ export function SignIn() {
     return (
         <Container ref={containerRef}>
             <Main ref={mainRef}>
-                <Brand />
+                <Trademark />
                 <Form>
                     <h1>Faça o login</h1>
 

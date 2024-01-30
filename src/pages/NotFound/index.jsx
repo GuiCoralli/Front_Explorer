@@ -2,8 +2,6 @@ import React from 'react';
 
 import { useNavigate } from 'react-router-dom';
 
-import { Button } from '../../components/Button';
-
 import { Container } from './styles';
 
 export function NotFound() {
@@ -17,8 +15,8 @@ export function NotFound() {
 
     return (
         <Container>
-            <h1>404...</h1>
-            <p>A página que você requisitou não foi encontrada.</p>
+            <h1> 404...</h1>
+            <p> Ops.. Deu algum problema. A página procurada não foi encontrada.</p>
             <Button
                 title="Retornar à home"
                 onClick={handleBack}

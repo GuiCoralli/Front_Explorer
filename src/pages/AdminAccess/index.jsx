@@ -1,19 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 
 import { api } from '../../services/api';
 
+import { BsHexagonFill } from 'react-icons/bs'
 
 import { Section } from '../../components/Section';
-import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
+import { Button } from '../../components/Button';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { Container, Main, Form } from './styles';
+import { Container, Main, Logo, Form } from './styles';
 
-export function SignUp() {
+export function AdminAccess() {
     const mainRef = useRef(null);
     const containerRef = useRef(null);
 
@@ -22,21 +22,19 @@ export function SignUp() {
     const [password, setPassword] = useState("");
     const [loadingSignUp, setLoadingSignUp] = useState(false);
 
-    const navigate = useNavigate();
-
     function handleSignUp() {
         if (!name || !email || !password) {
-            return toast("Preencha todos os campos.");
+            return toast("Complete todos os campos.");
         };
 
-        if (name.length < 4) {
-            return toast("O nome deve ter no mínimo 4 caracteres.");
+        if (name.length < 3) {
+            return toast("O nome deve ter no mínimo 3 caracteres.");
         };
 
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (!emailPattern.test(email)) {
-            return toast("Por favor, insira um email válido.");
+            return toast("Por favor, coloque um email válido.");
         };
 
         if (password.length < 6) {
@@ -44,12 +42,13 @@ export function SignUp() {
         };
 
         setLoadingSignUp(true);
-        api.post("/users", { name, email, password })
+        api.post("/adminaccess", { name, email, password })
             .then(() => {
                 setLoadingSignUp(false);
-                toast("Usuário cadastrado com sucesso!");
+                toast("Administrador cadastrado com sucesso!");
+
                 setTimeout(() => {
-                    navigate("/");
+                    window.location.reload();
                 }, 2000);
             })
             .catch(error => {
@@ -58,7 +57,7 @@ export function SignUp() {
                     toast(error.response.data.message);
                 } else {
                     toast("Não foi possível cadastrar.");
-                };
+                }
             });
     };
 
@@ -92,43 +91,46 @@ export function SignUp() {
     return (
         <Container ref={containerRef}>
             <Main ref={mainRef}>
-                <Brand />
-                <Form>
-                    <h1>Criar Conta</h1>
+                <Logo>
+                    <BsHexagonFill />
+                    food explorer
+                </Logo>
+                    <Form>
+                        <h1>Crie sua conta</h1>
 
-                    <Section title="Nome">
-                        <Input
-                            placeholder="Exemplo: João de Oliveira"
-                            onChange={e => setName(e.target.value)}
+                        <Section title="Seu nome">
+                            <Input
+                                placeholder="Exemplo: José de Oliveira"
+                                onChange={e => setName(e.target.value)}
+                            />
+                        </Section>
+
+                        <Section title="Email">
+                            <Input
+                                placeholder="Exemplo: exemplo@email.com.br"
+                                onChange={e => setEmail(e.target.value)}
+                            />
+                        </Section>
+
+                        <Section title="Senha">
+                            <Input
+                                type="password"
+                                placeholder="No mínimo 6 caracteres"
+                                onChange={e => setPassword(e.target.value)}
+                                onKeyPress={handleKeyPress}
+                            />
+                        </Section>
+
+                        <Button
+                            onClick={handleSignUp}
+                            loading={loadingSignUp}
+                            title="Criar conta de administrador"
                         />
-                    </Section>
-
-                    <Section title="Email">
-                        <Input
-                            placeholder="Exemplo: exemplo@email.com.br"
-                            onChange={e => setEmail(e.target.value)}
-                        />
-                    </Section>
-
-                    <Section title="Senha">
-                        <Input
-                            type="password"
-                            placeholder="No mínimo 6 caracteres"
-                            onChange={e => setPassword(e.target.value)}
-                            onKeyPress={handleKeyPress}
-                        />
-                    </Section>
-
-                    <Button
-                        onClick={handleSignUp}
-                        loading={loadingSignUp}
-                        title="Criar conta"
-                    />
-
-                    <Link to="/">Já tenho uma conta</Link>
-                </Form>
+                    </Form>
             </Main>
             <ToastContainer autoClose={1500} draggable={false} />
         </Container>
     );
 }
+
+

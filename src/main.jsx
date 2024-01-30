@@ -6,12 +6,12 @@ import { AuthProvider } from './hooks/auth';
 
 import GlobalStyles from './styles/global';
 import { ThemeProvider } from 'styled-components';
-import { ThemeSlider } from './components/ThemeSlider';
+import { ChangeMode } from './components/ChangeMode';
 import { themeLight, themeDark } from './styles/theme';
 import { themeConfig } from './styles/themeConfig';
 
 function App() {
-    const { theme, toggleTheme } = themeConfig();
+    const { theme, toggleThemeMode } = themeConfig();
     const themeMode = theme === "themeLight" ? themeLight : themeDark;
 
     return (
@@ -20,7 +20,7 @@ function App() {
                 <GlobalStyles />
                 <AuthProvider>
                     <Routes />
-                    <ThemeSlider theme={theme} toggleTheme={toggleTheme} />
+                    <ChangeMode theme={theme} toggleThemeMode={toggleThemeMode} />
                 </AuthProvider>
             </ThemeProvider>
         </React.StrictMode>
