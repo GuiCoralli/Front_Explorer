@@ -21,42 +21,29 @@ export function Routes() {
         async function checkIfAdminAccessExists() {
             try {
                 const response = await api.get("/adminaccess");
-
+            
                 if (response.data) {
                     setAdminAccessExists(true);
                 } else {
                     setAdminAccessExists(false);
-                };
-
+                }
+            
                 setLoaded(true);
             } catch (error) {
-                console.error("Erro ao verificar se o administrador existe:", error);
-                toast("Erro ao verificar se existe um administrador, tente novamente.");
-            };
+                if (error.response && error.response.status === 404) {
+                    // O servidor respondeu com um status 404 (Not Found)
+                } else {
+                    // Outro tipo de erro
+                    console.error("Erro ao verificar se o administrador existe:", error);
+                    toast("Erro ao verificar se existe um administrador, tente novamente.");
+                }
+        
+                setLoaded(true);
+            }
         };
-
+        
         checkIfAdminAccessExists();
     }, []);
-
-    if (!loaded) {
-        return (
-            <div className='loading'>
-                <div>
-                    <div id="circular3dG">
-                        <div id="circular3d_1G" className="circular3dG"></div>
-                        <div id="circular3d_2G" className="circular3dG"></div>
-                        <div id="circular3d_3G" className="circular3dG"></div>
-                        <div id="circular3d_4G" className="circular3dG"></div>
-                        <div id="circular3d_5G" className="circular3dG"></div>
-                        <div id="circular3d_6G" className="circular3dG"></div>
-                        <div id="circular3d_7G" className="circular3dG"></div>
-                        <div id="circular3d_8G" className="circular3dG"></div>
-                    </div>
-                </div>
-                <span>Carregando...</span>
-            </div>
-        );
-    };
 
     return (
         <BrowserRouter>

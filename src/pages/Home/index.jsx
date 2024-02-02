@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import { api } from '../../services/api';
 
-import { Header } from '../../components/Header';
 import { CardItem } from '../../components/CardItem';
+import { Header } from '../../components/Header';
 import { Switch  } from '../../components/Switch';
 import { Footer } from '../../components/Footer';
 
@@ -12,9 +12,16 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import { Container, Content, Banner, WrappedBanner, Slogan, BgBanner, NoResults } from './styles';
 
+const mapPlatesToCards = (plates, setPlateToAdd) => {
+    return plates.map(plate => (
+      <CardItem key={plate.id} plate={plate} setPlateToAdd={setPlateToAdd} />
+    ));
+  };
+
+
 export function Home() {
 
-    const [meals, setMeals] = useState([]);
+    const [foods, setFoods] = useState([]);
     const [desserts, setDesserts] = useState([]);
     const [drinks, setDrinks] = useState([]);
 
@@ -29,6 +36,7 @@ export function Home() {
     const [orderItems, setOrderItems] = useState(0);
     const [loadingPlates, setLoadingPlates] = useState(true);
 
+    
     useEffect(() => {
         async function fetchPlates() {
             try {
@@ -37,33 +45,14 @@ export function Home() {
 
                 setPlates(response.data);
 
-                const mealsArray = response.data.filter(plate => plate.category === "Comidas");
+                const foodsArray = response.data.filter(plate => plate.category === "Comidas");
                 const dessertsArray = response.data.filter(plate => plate.category === "Sobremesas");
                 const drinksArray = response.data.filter(plate => plate.category === "Bebidas");
 
-                setMeals(mealsArray.map(meal =>
-                    <Card
-                        key={meal.id}
-                        plate={meal}
-                        setPlateToAdd={setPlateToAdd}
-                    />
-                ));
+                setFoods(mapPlatesToCards(foodsArray, setPlateToAdd));
+                setDesserts(mapPlatesToCards(dessertsArray, setPlateToAdd));
+                setDrinks(mapPlatesToCards(drinksArray, setPlateToAdd));
 
-                setDesserts(dessertsArray.map(dessert =>
-                    <Card
-                        key={dessert.id}
-                        plate={dessert}
-                        setPlateToAdd={setPlateToAdd}
-                    />
-                ));
-
-                setDrinks(drinksArray.map(drink =>
-                    <Card
-                        key={drink.id}
-                        plate={drink}
-                        setPlateToAdd={setPlateToAdd}
-                    />
-                ));
             } catch (error) {
                 console.error("Aconteceu um erro ao buscar por pratos:", error);
                 toast("Não foi possível buscar por comidas, tente novamente.");
@@ -98,34 +87,13 @@ export function Home() {
         var searchResult = filterPlatesByNameOrIngredient(itemSearch);
         setFilteredSearch(searchResult);
 
-        const mealsArray = searchResult.filter(plate => plate.category === "Comidas");
+        const foodsArray = searchResult.filter(plate => plate.category === "Comidas");
         const dessertsArray = searchResult.filter(plate => plate.category === "Sobremesas");
         const drinksArray = searchResult.filter(plate => plate.category === "Bebidas");
 
-        setMeals(mealsArray.map(meal =>
-            <Card
-                key={meal.id}
-                plate={meal}
-                setPlateToAdd={setPlateToAdd}
-            />
-        ));
-
-        setDesserts(dessertsArray.map(dessert =>
-            <Card
-                key={dessert.id}
-                plate={dessert}
-                setPlateToAdd={setPlateToAdd}
-            />
-        ));
-
-        setDrinks(drinksArray.map(drink =>
-            <Card
-                key={drink.id}
-                plate={drink}
-                setPlateToAdd={setPlateToAdd}
-            />
-        ));
-
+        setFoods(mapPlatesToCards(foodsArray, setPlateToAdd));
+        setDesserts(mapPlatesToCards(dessertsArray, setPlateToAdd));
+        setDrinks(mapPlatesToCards(drinksArray, setPlateToAdd));
     }, [itemSearch]);
 
     useEffect(() => {
@@ -154,6 +122,7 @@ export function Home() {
         <Container>
             <Header
                 setItemSearch={setItemSearch}
+                setSearch={setSearch}
                 page={page}
                 plates={plates}
                 orderItems={orderItems}
@@ -167,22 +136,15 @@ export function Home() {
                     </Slogan>
                     <BgBanner className="bgBanner" />
                 </Banner>
-                {
-                    meals.length > 0 &&
-                    <Switch title="Comidas" content={meals} />
+                {foods.length > 0 && <Switch title="Comidas" content={foods} />
                 }
-                {
-                    desserts.length > 0 &&
-                    <Switch title="Sobremesas" content={desserts} />
+                {desserts.length > 0 && <Switch title="Sobremesas" content={desserts} />
                 }
-                {
-                    drinks.length > 0 &&
-                    <Switch title="Bebidas" content={drinks} />
+                {drinks.length > 0 && <Switch title="Bebidas" content={drinks} />
                 }
-                {
-                    itemSearch && meals.length <= 0 && desserts.length <= 0 && drinks.length <= 0 &&
+                {itemSearch && filteredSearch.length <= 0 (
                     <NoResults>Nenhum resultado encontrado!</NoResults>
-                }
+                )}
                 {
                     !loadingPlates && plates.length <= 0 &&
                     <NoResults>Nenhum prato cadastrado!</NoResults>

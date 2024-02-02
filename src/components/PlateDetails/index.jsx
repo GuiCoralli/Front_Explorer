@@ -1,8 +1,12 @@
+import React from 'react';
 import { FaPlus, FaTimes } from 'react-icons/fa';
-
 import { Container } from './styles';
 
+
 export function PlateDetails({ $isNew, value, onClick, ...rest }) {
+    
+    const IconComponent = $isNew ? <FaPlus /> : <FaTimes/>;
+
     return (
         <Container $isNew={$isNew} size={value.length}>
             <input
@@ -15,9 +19,10 @@ export function PlateDetails({ $isNew, value, onClick, ...rest }) {
             <button
                 type="button"
                 onClick={onClick}
-            >
-                {$isNew ? <FaPlus /> : <FaTimes />}
+            >                
+                {IconComponent}
             </button>
         </Container>
     );
 }
+

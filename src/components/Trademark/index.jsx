@@ -1,6 +1,7 @@
+import React from 'react';
 import { BsHexagonFill } from 'react-icons/bs';
 
-import { Container, AdminAccess } from './styles';
+import { Container, Trademark, AdminAccess } from './styles';
 
 export function Trademark({ isAdminAccess}) {
     return (
@@ -9,11 +10,11 @@ export function Trademark({ isAdminAccess}) {
                 <BsHexagonFill />
                 food explorer
             </Trademark>
-            {isAdminAccess ? (
+            {isAdminAccess && (
                 <AdminAccess>
                     adminaccess
                 </AdminAccess>
-            ) : null}
+            )}
         </Container>
     );
 }

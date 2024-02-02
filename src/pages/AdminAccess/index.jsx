@@ -22,53 +22,49 @@ export function AdminAccess() {
     const [password, setPassword] = useState("");
     const [loadingSignUp, setLoadingSignUp] = useState(false);
 
-    function handleSignUp() {
+    const handleSignUp = async () => {
+        try {
+
         if (!name || !email || !password) {
-            return toast("Complete todos os campos.");
+            throw new Error("Complete todos os campos.");
         };
 
-        if (name.length < 3) {
-            return toast("O nome deve ter no mínimo 3 caracteres.");
+        if (name.length < 4) {
+            throw new Error("O nome deve ter no mínimo 4 caracteres.");
         };
 
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (!emailPattern.test(email)) {
-            return toast("Por favor, coloque um email válido.");
+        const emailDefault = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailDefault.test(email)) {
+            throw new Error("Por favor, coloque um email válido.");
         };
 
         if (password.length < 6) {
-            return toast("A senha deve ter no mínimo 6 caracteres.");
+            throw new Error("A senha deve ter no mínimo 6 caracteres.");
         };
 
         setLoadingSignUp(true);
         api.post("/adminaccess", { name, email, password })
-            .then(() => {
-                setLoadingSignUp(false);
-                toast("Administrador cadastrado com sucesso!");
-
-                setTimeout(() => {
-                    window.location.reload();
-                }, 2000);
-            })
-            .catch(error => {
-                setLoadingSignUp(false);
-                if (error.response) {
-                    toast(error.response.data.message);
-                } else {
-                    toast("Não foi possível cadastrar.");
-                }
-            });
+            .toast("Administrador cadastrado com sucesso!");
+            setLoadingSignUp(false);
+              
+        } catch(error) {
+            setLoadingSignUp(false);
+        if (error.response) {
+            toast(error.response.data.message);
+        } else {
+            toast("Não foi possível cadastrar.");
+        }
     };
+};
 
-    function handleKeyPress(event) {
+    const handleKeyPress = event => {
         if (event.key === "Enter") {
             handleSignUp();
-        };
+        }
     };
 
     useEffect(() => {
-        function handleResize() {
+        const handleResize = () => {
             const containerHeight = mainRef.current.offsetHeight;
             const windowHeight = window.innerHeight;
 
