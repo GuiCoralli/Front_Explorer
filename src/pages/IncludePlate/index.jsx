@@ -174,7 +174,7 @@ export function IncludePlate() {
 						<div>
 							{
 								ingredients.map((ingredient, index) => (
-									<PlateItem
+									<PlateDetails
 										key={index}
 										value={ingredient}
 										onClick={() => handleRemoveIngredient(ingredient)}
@@ -182,7 +182,7 @@ export function IncludePlate() {
 								))
 							}
 
-							<PlateItem
+							<PlateDetails
 								$isNew
 								placeholder="Adicionar"
 								onChange={e => setNewIngredient(e.target.value)}
@@ -209,7 +209,7 @@ export function IncludePlate() {
 					</Section>
 
 					<div>
-						<PressButton
+						<Button
 							type="text"
 							disabled={!isNotEmptyFields}
 							onClick={handleNewPlate}

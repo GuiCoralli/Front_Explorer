@@ -20,7 +20,7 @@ export function Plate() {
 
     const params = useParams();
 
-    const [plate, setPlate] = useState(null);
+    const [plate, setPlates] = useState(null);
     const [plateQuantity, setPlateQuantity] = useState(1);
 
     const [plateToAdd, setPlateToAdd] = useState();

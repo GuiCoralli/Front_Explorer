@@ -14,46 +14,38 @@ import { RegisterRoutes } from './register.routes';
 
 export function Routes() {
     const { user, isAdminAccess } = useAuth();
-    const [loaded, setLoaded] = useState(false);
     const [adminAccessExists, setAdminAccessExists] = useState(false);
 
     useEffect(() => {
         async function checkIfAdminAccessExists() {
             try {
                 const response = await api.get("/adminaccess");
-            
-                if (response.data) {
-                    setAdminAccessExists(true);
-                } else {
-                    setAdminAccessExists(false);
-                }
-            
-                setLoaded(true);
+                setAdminAccessExists(!!response.data);
             } catch (error) {
+                console.error("Erro ao verificar se o administrador existe:", error);
+
                 if (error.response && error.response.status === 404) {
-                    // O servidor respondeu com um status 404 (Not Found)
+                    toast("Administrador não encontrado. Registre-se para obter acesso.");
                 } else {
-                    // Outro tipo de erro
-                    console.error("Erro ao verificar se o administrador existe:", error);
-                    toast("Erro ao verificar se existe um administrador, tente novamente.");
+                    toast("Erro ao verificar se existe um administrador. Tente novamente.");
                 }
-        
-                setLoaded(true);
             }
-        };
-        
+        }
+
         checkIfAdminAccessExists();
     }, []);
 
     return (
         <BrowserRouter>
-            {
-                adminAccessExists ? (
-                    user ? (isAdminAccess ? <AdminAccessRoutes /> : <UserRoutes />) : <AuthRoutes />
+            {adminAccessExists ? (
+                user ? (
+                    isAdminAccess ? <AdminAccessRoutes /> : <UserRoutes />
                 ) : (
-                    <RegisterRoutes />
+                    <AuthRoutes />
                 )
-            }
+            ) : (
+                <RegisterRoutes />
+            )}
         </BrowserRouter>
     );
 }

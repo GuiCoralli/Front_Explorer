@@ -1,7 +1,7 @@
 import React from 'react';
 import { BsHexagonFill } from 'react-icons/bs';
 
-import { Container, Trademark, AdminAccess } from './styles';
+import { Container, AdminAccess } from './styles';
 
 export function Trademark({ isAdminAccess}) {
     return (
