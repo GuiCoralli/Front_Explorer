@@ -6,13 +6,15 @@ import { Container, AdminAccess } from './styles';
 export function Trademark({ isAdminAccess}) {
     return (
         <Container>
-            <Trademark>
+            <div className="trademark">
                 <BsHexagonFill />
                 food explorer
-            </Trademark>
+            </div>
+            
             {isAdminAccess && (
+
                 <AdminAccess>
-                    adminaccess
+                  adminaccess
                 </AdminAccess>
             )}
         </Container>
