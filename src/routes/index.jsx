@@ -20,8 +20,13 @@ export function Routes() {
         async function checkIfAdminAccessExists() {
             try {
                 const response = await api.get("/adminaccess");
-                setAdminAccessExists(!!response.data);
-            } catch (error) {
+                if (response.data) {
+                    setAdminAccessExists(true);
+                } else {
+                    setAdminAccessExists(false);
+                };
+
+            }   catch (error) {
                 console.error("Erro ao verificar se o administrador existe:", error);
 
                 if (error.response && error.response.status === 404) {
@@ -34,6 +39,9 @@ export function Routes() {
 
         checkIfAdminAccessExists();
     }, []);
+
+            
+                
 
     return (
         <BrowserRouter>
