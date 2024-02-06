@@ -18,14 +18,15 @@
 ## Navigation
 
 <p align="center">
-  <a href="#-Project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Access">Access</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Functionalities">Functionalities</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Characteristics">Characteristics</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<br>
-  <a href="#-Technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Prerequisites">Prerequisites</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Running-the-Frontend">Running the Frontend</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Important">Important</a>&nbsp;&nbsp;&nbsp;
+  <a href="#-Project">📄Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Access">📌Access</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Functionalities">✅Functionalities</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Characteristics">⚙️Characteristics</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<br>
+  <a href="#-Technologies">🚀Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Technologies">📖Dependencies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Prerequisites">💻Prerequisites</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Running-the-Frontend">🔄✅Running the Frontend</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Important">⚠️Important</a>&nbsp;&nbsp;&nbsp;
 </p>
 
 
@@ -118,6 +119,25 @@ You can access with:
 - [x] [REACT](https://developer.mozilla.org/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started) <img align="center" alt="Gui-REACT" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
  
  </div>
+
+
+# 📖 Dependencies 
+ Project was developed and used the following libraries:
+<div>
+	
+- [x] [@react-icons](https://react-icons.github.io/react-icons/)
+- [x] [@vitejs](https://vitejs.dev/plugins/) 
+- [x] [@axios](https://axios-http.com/) 
+- [x] [@cors](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CORS) 
+- [x] [@react-hooks](https://pt-br.legacy.reactjs.org/docs/hooks-intro.html) 
+- [x] [@jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken?activeTab=readme) 
+- [x] [@jwt-decode](https://www.npmjs.com/package/jwt-decode) 
+- [x] [@react-router-dom](https://www.npmjs.com/package/react-router-dom) 
+- [x] [@react-toastify](https://www.npmjs.com/package/react-toastify) 
+- [x] [@styled-components](https://styled-components.com/) 
+
+ </div>
+ 
 
 # 💻 Prerequisites
 
