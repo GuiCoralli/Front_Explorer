@@ -1,123 +1,143 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
-import jwt_decode from 'jwt-decode';
+import React, { createContext, useContext, useState, useEffect  } from "react";
+
 import { api } from '../services/api';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
+import { toast } from "react-hot-toast";
 
 const AuthContext = createContext({});
 
 function AuthProvider({ children }) {
-  const [data, setData] = useState({});
+    const [data, setData] = useState({});
 
-  const handleErrors = (error) => {
-    if (error.response) {
-      console.error("Erro: ", error.response.data.message);
-      toast(error.response.data.message);
-    } else {
-      console.error("Erro: ", error);
-      toast("Não foi possível realizar a operação. Tente novamente.");
-    }
-  };
+    async function logIn({ email, password }) {
+        try {
+            const response = await api.post("/sessions", { email, password });
+            const { user, token, isAdmin } = response.data;
+            let request = {};
 
-  const signIn = async ({ email, password }) => {
-    try {
-      const { data: { user, token, isAdminAccess } } = await api.post("/sessions", { email, password });
-      const requestorder = isAdminAccess ? {} : JSON.parse(localStorage.getItem("@foodexplorer:requestorder")) || {
-        user_id: user.id,
-        status: "aberto",
-        plates: []
-      };
+            const userLocalStorage = {
+                id: user.id,
+                name: user.name,
+                email: user.email,
+                avatar: user.avatar
+            };
 
-      localStorage.setItem("@foodexplorer:user", JSON.stringify({
-        id: user.id,
-        name: user.name,
-        email: user.email,
-        avatar: user.avatar
-      }));
-      localStorage.setItem("@foodexplorer:token", token);
-      if (!isAdminAccess) localStorage.setItem("@foodexplorer:requestorder", JSON.stringify(requestorder));
+            localStorage.setItem("@foodexplorer:user", JSON.stringify(userLocalStorage));
+            localStorage.setItem("@foodexplorer:token", token);
 
-      api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+            if (!isAdmin) {
+                const storageRequest = JSON.parse(localStorage.getItem("@foodexplorer:request"));
 
-      setData({ user, token, isAdminAccess, requestorder });
-    } catch (error) {
-      handleErrors(error);
-    }
-  };
+                if (storageRequest && storageRequest.user_id === user.id) {
+                    request = storageRequest;
+                } else {
+                    request = {
+                        user_id: user.id,
+                        status: "aberto",
+                        foods: []
+                    };
 
-  const signOut = () => {
-    localStorage.removeItem("@foodexplorer:token");
-    localStorage.removeItem("@foodexplorer:user");
-    localStorage.removeItem("@foodexplorer:requestorder");
+                    localStorage.setItem("@foodexplorer:request", JSON.stringify(request));
+                };
+            };
 
-    setData({});
-  };
+            api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
-  const updateProfile = async ({ user, avatarFile }) => {
-    try {
-      if (avatarFile) {
-        const fileUploadForm = new FormData();
-        fileUploadForm.append("avatar", avatarFile);
+            setData({ user, token, isAdmin, request });
 
-        const { data: { avatar } } = await api.patch("/users/avatar", fileUploadForm);
-        user.avatar = avatar;
-      }
+        } catch (error) {
+            if (error.response) {
+                console.error("Erro ao tentar realizar o login com o usuário: ", error.response.data.message);
+                toast(error.response.data.message);
+            } else {
+                console.error("Aconteceu um erro ao tentar realizar o login com o usuário: ", error);
+                toast("Não foi possível entrar. Por favor, tente novamente.");
+            };
+        };
+    };
 
-      await api.put("/users", user);
+    function register() {
+        localStorage.removeItem("@foodexplorer:token");
+        localStorage.removeItem("@foodexplorer:user");
 
-      const userLocalStorage = {
-        id: user.id,
-        name: user.name,
-        email: user.email,
-        avatar: user.avatar
-      };
+        setData({});
+    };
 
-      localStorage.setItem("@foodexplorer:user", JSON.stringify(userLocalStorage));
+    async function updateProfile({ user, avatarFile, isAdmin, request }) {
+        try {
+            if (avatarFile) {
+                const fileUploadForm = new FormData();
+                fileUploadForm.append("avatar", avatarFile);
 
-      setData({ user, token: data.token, isAdminAccess: data.isAdminAccess, requestorder: data.requestorder });
-      toast("Perfil atualizado com sucesso!");
-    } catch (error) {
-      handleErrors(error);
-    }
-  };
+                const response = await api.patch("/users/avatar", fileUploadForm);
+                user.avatar = response.data.avatar;
+            };
 
-  useEffect(() => {
-    const token = localStorage.getItem("@foodexplorer:token");
-    const user = localStorage.getItem("@foodexplorer:user");
-    const requestorder = localStorage.getItem("@foodexplorer:requestorder");
+            await api.put("/users", user);
 
-    if (token && user) {
-      api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+            const userLocalStorage = {
+                id: user.id,
+                name: user.name,
+                email: user.email,
+                avatar: user.avatar
+            };
 
-      const decodedToken = jwt_decode(token);
-      const isAdminAccess = decodedToken.isAdminAccess;
+            localStorage.setItem("@foodexplorer:user", JSON.stringify(userLocalStorage));
 
-      setData({
-        token,
-        user: JSON.parse(user),
-        isAdminAccess,
-        requestorder: JSON.parse(requestorder)
-      });
-    }
-  }, []);
+            setData({ user, token: data.token, isAdmin, request });
+            toast("Perfil do usuário atualizado!");
 
-  return (
-    <AuthContext.Provider value={{
-      signIn,
-      signOut,
-      updateProfile,
-      user: data.user,
-      isAdminAccess: data.isAdminAccess,
-      requestorder: data.requestorder
-    }}>
-      {children}
-    </AuthContext.Provider>
-  );
-}
+        } catch (error) {
+            if (error.response) {
+                console.error("Aconteceu um erro ao tentar atualizar o perfil do uusário: ", error.response.data.message);
+                toast(error.response.data.message);
+            } else {
+                console.error("Erro ao atualizar o perfil do usuário: ", error);
+                toast("Não foi possível atualizar o perfil do usuário. Por favor, tente novamente.");
+            }
+        };
+    };
+
+    useEffect(() => {
+        const token = localStorage.getItem("@foodexplorer:token");
+        const user = localStorage.getItem("@foodexplorer:user");
+        const request = localStorage.getItem("@foodexplorer:request");
+
+        if (token && user) {
+            api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+
+            const decodedToken = jwt_decode(token);
+            const isAdmin = decodedToken.isAdmin;
+
+            setData({
+                token,
+                user: JSON.parse(user),
+                isAdmin,
+                request: JSON.parse(request)
+            });
+        };
+
+    }, []);
+
+    return (
+        <AuthContext.Provider value={{
+            logIn,
+            register,
+            updateProfile,
+            user: data.user,
+            isAdmin: data.isAdmin,
+            request: data.request
+        }}
+        >
+            {children}
+        </AuthContext.Provider>
+    )
+};
 
 function useAuth() {
-  const context = useContext(AuthContext);
-  return context;
-}
+    const context = useContext(AuthContext);
+
+    return context;
+};
 
 export { AuthProvider, useAuth };

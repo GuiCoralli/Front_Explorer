@@ -1,157 +1,157 @@
+
 import React, { useState, useEffect } from 'react';
 
 import { api } from '../../services/api';
 
-import { CardItem } from '../../components/CardItem';
 import { Header } from '../../components/Header';
-import { Switch  } from '../../components/Switch';
+import { Card } from '../../components/Card';
+import { Roundabout } from '../../components/Roundabout';
 import { Footer } from '../../components/Footer';
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
-import { Container, Content, Banner, WrappedBanner, Slogan, BgBanner, NoResults } from './styles';
+import { Toaster, toast } from 'react-hot-toast';  // Importa a biblioteca do Toaster do react-hot-toast
 
-const mapPlatesToCards = (plates, setPlateToAdd) => {
-    return plates.map(plate => (
-      <CardItem key={plate.id} plate={plate} setPlateToAdd={setPlateToAdd} />
-    ));
-  };
-
+import {  Container,  Content,  CoverPage ,  BundleBanner,  Quote,  BgBanner,  NoResults} from './styles';
 
 export function Home() {
+  const [meals, setMeals] = useState([]);
+  const [desserts, setDesserts] = useState([]);
+  const [drinks, setDrinks] = useState([]);
+  const [allFoods, setAllFoods] = useState([]);
+  const [searchedItem, setSearchedItem] = useState("");
+  const [requestItemsCount, setRequestItemsCount] = useState(0);
+  const [isLoadingFoods, setIsLoadingFoods] = useState(true);
+  const [foodToAddToRequest, setFoodToAddToRequest] = useState(null); 
+  
+  useEffect(() => {
+    async function fetchFoods() {
+      try {
+        setIsLoadingFoods(true);
+        const response = await api.get(`/foods?itemSearch=${searchedItem}`);
+        setAllFoods(response.data);
 
-    const [foods, setFoods] = useState([]);
-    const [desserts, setDesserts] = useState([]);
-    const [drinks, setDrinks] = useState([]);
+        const mealsArray = response.data.filter(food => food.category === "Refeições");
+        const dessertsArray = response.data.filter(food => food.category === "Sobremesas");
+        const drinksArray = response.data.filter(food => food.category === "Bebidas");
 
-    const [plates, setPlates] = useState([]);
-
-    const [itemSearch, setItemSearch] = useState("");
-    const [filteredSearch, setFilteredSearch] = useState([]);
-    const [search, setSearch] = useState("");
-    const page = "home";
-
-    const [plateToAdd, setPlateToAdd] = useState();
-    const [orderItems, setOrderItems] = useState(0);
-    const [loadingPlates, setLoadingPlates] = useState(true);
-
-    
-    useEffect(() => {
-        async function fetchPlates() {
-            try {
-                setLoadingPlates(true);
-                const response = await api.get(`/plates?itemSearch=${search}`);
-
-                setPlates(response.data);
-
-                const foodsArray = response.data.filter(plate => plate.category === "Comidas");
-                const dessertsArray = response.data.filter(plate => plate.category === "Sobremesas");
-                const drinksArray = response.data.filter(plate => plate.category === "Bebidas");
-
-                setFoods(mapPlatesToCards(foodsArray, setPlateToAdd));
-                setDesserts(mapPlatesToCards(dessertsArray, setPlateToAdd));
-                setDrinks(mapPlatesToCards(drinksArray, setPlateToAdd));
-
-            } catch (error) {
-                console.error("Aconteceu um erro ao buscar por pratos:", error);
-                toast("Não foi possível buscar por comidas, tente novamente.");
-            } finally {
-                setLoadingPlates(false);
-            };
-        };
-
-        fetchPlates();
-
-    }, []);
-
-    useEffect(() => {
-        function filterPlatesByNameOrIngredient(searchQuery) {
-            searchQuery = searchQuery.toLowerCase();
-
-            var filteredPlates = plates.filter(function (plate) {
-                if (plate.name.toLowerCase().includes(searchQuery)) {
-                    return true;
-                };
-
-                var foundIngredient = plate.ingredients.find(function (ingredient) {
-                    return ingredient.name.toLowerCase().includes(searchQuery);
-                });
-
-                return !!foundIngredient;
-            });
-
-            return filteredPlates;
-        };
-
-        var searchResult = filterPlatesByNameOrIngredient(itemSearch);
-        setFilteredSearch(searchResult);
-
-        const foodsArray = searchResult.filter(plate => plate.category === "Comidas");
-        const dessertsArray = searchResult.filter(plate => plate.category === "Sobremesas");
-        const drinksArray = searchResult.filter(plate => plate.category === "Bebidas");
-
-        setFoods(mapPlatesToCards(foodsArray, setPlateToAdd));
-        setDesserts(mapPlatesToCards(dessertsArray, setPlateToAdd));
-        setDrinks(mapPlatesToCards(drinksArray, setPlateToAdd));
-    }, [itemSearch]);
-
-    useEffect(() => {
-        if (plateToAdd) {
-            const oldItems = JSON.parse(localStorage.getItem("@foodexplorer:order"));
-            const existingPlateIndex = oldItems.plates.findIndex(plate => plate.plate_id === plateToAdd.plate_id);
-
-            const updatedOrder = { ...oldItems };
-
-            if (existingPlateIndex !== -1) {
-                updatedOrder.plates[existingPlateIndex].quantity += plateToAdd.quantity;
-            } else {
-                updatedOrder.plates.push(plateToAdd);
-            };
-
-            localStorage.setItem("@foodexplorer:order", JSON.stringify(updatedOrder));
-
-            setOrderItems(orderItems + plateToAdd.quantity);
-
-            toast("Adicionado um item ao pedido.")
-        };
-
-    }, [plateToAdd]);
-
-    return (
-        <Container>
-            <Header
-                setItemSearch={setItemSearch}
-                setSearch={setSearch}
-                page={page}
-                plates={plates}
-                orderItems={orderItems}
+        setMeals(mealsArray.map(meal => 
+            <Card key={meal.id} 
+                food={meal} 
+                setFoodToAdd={setFoodToAddToRequest} 
             />
-            <Content>
-                <Banner className="banner">
-                    <WrappedBanner className="wrappedBanner" />
-                    <Slogan className="slogan">
-                        <h1>Sabores inigualáveis</h1>
-                        <span>Sinta o cuidado do preparo com ingredientes selecionados</span>
-                    </Slogan>
-                    <BgBanner className="bgBanner" />
-                </Banner>
-                {foods.length > 0 && <Switch title="Comidas" content={foods} />
-                }
-                {desserts.length > 0 && <Switch title="Sobremesas" content={desserts} />
-                }
-                {drinks.length > 0 && <Switch title="Bebidas" content={drinks} />
-                }
-                {itemSearch && filteredSearch.length <= 0 (
-                    <NoResults>Nenhum resultado encontrado!</NoResults>
-                )}
-                {
-                    !loadingPlates && plates.length <= 0 &&
-                    <NoResults>Nenhum prato cadastrado!</NoResults>
-                }
-            </Content>
-            <Footer />
-            <ToastContainer autoClose={1500} draggable={false} />
-        </Container >
+            )
+            );
+        setDesserts(dessertsArray.map(dessert => 
+            <Card key={dessert.id} 
+                food={dessert} 
+                setFoodToAdd={setFoodToAddToRequest} 
+            />
+            )
+            );
+        setDrinks(drinksArray.map(drink => 
+            <Card key={drink.id} 
+                food={drink} 
+                setFoodToAdd={setFoodToAddToRequest} 
+            />
+            )
+            );
+        } catch (error) {
+            console.error("Aconteceu um erro ao buscar os pratos:", error);
+            toast("Erro ao buscar os pratos. Por favor, tente novamente.");
+        } finally {
+        setIsLoadingFoods(false);
+    }
+    }
+
+    fetchFoods();
+    }, [searchedItem]);
+
+    useEffect(() => {
+        function filterFoodsByNameOrIngredient(query) {
+        query = query.toLowerCase();
+
+        const filteredFoods = allFoods.filter(food =>
+            food.name.toLowerCase().includes(query) ||
+            food.ingredients.some(ingredient => ingredient.name.toLowerCase().includes(query))
+        );
+        return filteredFoods;
+    }
+
+    const filteredSearchResults = filterFoodsByNameOrIngredient(searchedItem);
+    setSearchedItem(filteredSearchResults);
+
+    const updateRoundaboutItems = (category) => (
+      filteredSearchResults
+        .filter(food => food.category === category)
+        .map(food => <Card key={food.id} food={food} setFoodToAdd={setFoodToAddToRequest} />)
     );
+
+    setMeals(updateRoundaboutItems("Refeições"));
+    setDesserts(updateRoundaboutItems("Sobremesas"));
+    setDrinks(updateRoundaboutItems("Bebidas"));
+  }, [searchedItem, allFoods]);
+
+  useEffect(() => {
+    if (foodToAddToRequest) {
+      const oldItems = JSON.parse(localStorage.getItem("@foodexplorer:request")) || { foods: [] };
+      const existingFoodIndex = oldItems.foods.findIndex(item => item.food_id === foodToAddToRequest.food_id);
+      const updatedRequest = { ...oldItems };
+
+      if (existingFoodIndex !== -1) {
+        updatedRequest.foods[existingFoodIndex].amount += foodToAddToRequest.amount;
+      } else {
+        updatedRequest.foods.push(foodToAddToRequest);
+      }
+
+      localStorage.setItem("@foodexplorer:request", JSON.stringify(updatedRequest));
+      setRequestItemsCount(requestItemsCount + foodToAddToRequest.amount);
+      toast("Item adicionado ao pedido.");
+    }
+  }, [foodToAddToRequest]);
+
+  return (
+    <Container>
+      <Header setItemSearch={setSearchedItem} page="home" 
+        foods={allFoods} 
+        requestItems={requestItemsCount} 
+        />
+      <Content>
+        <CoverPage className="coverPage">
+          <BundleBanner className="bundleBanner" />
+          <Quote className="quote">
+            <h1>Sabores inigualáveis</h1>
+            <span>Sinta o cuidado do preparo com ingredientes selecionados</span>
+          </Quote>
+          <BgBanner className="bgBanner" />
+        </CoverPage>
+        {
+            meals.length > 0 && 
+            <Roundabout title="Refeições" 
+            content={meals} 
+            />
+        }
+        {desserts.length > 0 && 
+            <Roundabout title="Sobremesas" 
+            content={desserts} 
+            />
+        }
+        {drinks.length > 0 && 
+            <Roundabout title="Bebidas" 
+             content={drinks} 
+            />
+        }
+        {searchedItem && 
+            meals.length <= 0 && 
+            desserts.length <= 0 && drinks.length <= 0 && (
+            <NoResults>Nenhum resultado encontrado! </NoResults>
+        )
+        }
+        {!isLoadingFoods && allFoods.length <= 0 && 
+            <NoResults>Nenhum prato cadastrado!</NoResults>
+        }
+      </Content>
+      <Footer />
+      <Toaster /> 
+    </Container>
+  );
 }

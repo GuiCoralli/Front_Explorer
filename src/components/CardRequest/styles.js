@@ -7,7 +7,7 @@ export const Container = styled.div`
     flex-direction: column;
 `;
 
-export const RequestOrder = styled.div`
+export const Request = styled.div`
     display: grid;
     grid-template-columns: 15.2rem 15.2rem auto 15.2rem;
     
@@ -25,7 +25,7 @@ export const RequestOrder = styled.div`
     }
 `;
 
-export const RequestOrderAdminAccess = styled.div`
+export const RequestAdmin = styled.div`
     display: grid;
     grid-template-columns: 22rem 15.2rem auto 15.2rem;
     
@@ -65,7 +65,7 @@ export const Status = styled.div`
     }
 `;
 
-export const RequestStatusAdminAccess = styled.div`
+export const StatusAdmin = styled.div`
     padding: 1.6rem 2.4rem;
     border-right: 2px solid ${({ theme }) => theme.COLORS.DARK_1000};
     border-bottom: 2px solid ${({ theme }) => theme.COLORS.DARK_1000};
@@ -112,7 +112,7 @@ export const RequestStatusAdminAccess = styled.div`
     }
 `;
 
-export const RequestOrderId = styled.div`
+export const RequestId = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,7 +131,7 @@ export const RequestOrderId = styled.div`
     }
 `;
 
-export const PlateDetails = styled.div`
+export const Items = styled.div`
     display: flex;
     align-items: center;
 

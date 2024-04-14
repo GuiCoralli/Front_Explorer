@@ -1,22 +1,22 @@
-import { TfiUser, TfiEmail, TfiLock } from 'react-icons/tfi';
-import { ToastContainer, toast } from 'react-toastify';
-
-import 'react-toastify/dist/ReactToastify.css';
 import React, { useState } from 'react';
 
 import { useAuth } from '../../hooks/auth';
 import { api } from '../../services/api';
 
-import { GoBack  } from '../../components/GoBack';
+import { TfiUser, TfiEmail, TfiLock } from 'react-icons/tfi';
+
+import { BackButton } from '../../components/BackButton';
+import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 import { Footer } from '../../components/Footer';
-import { Input } from '../../components/Input';
+
+import { Toaster, toast } from 'react-hot-toast';;  // Importa a biblioteca do Toaster do react-hot-toast
 
 
 import { Container, Form, Avatar, ChangeAvatar } from './styles';
 
 export function Profile() {
-    const { user, updateProfile, isAdminAccess, requestorder } = useAuth();
+    const { user, updateProfile, isAdmin, request } = useAuth();
 
     const avatarUrl = `${api.defaults.baseURL}/files/${user.avatar}`;
 
@@ -28,8 +28,8 @@ export function Profile() {
     const [avatarFile, setAvatarFile] = useState(null);
 
     async function handleUpdate() {
-        if (name.length < 4) {
-            return toast("O nome deve ter no mínimo 4 caracteres.");
+        if (name.length < 3) {
+            return toast("O nome deve ter no mínimo 3 caracteres.");
         };
 
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -39,7 +39,7 @@ export function Profile() {
         }
 
         if (passwordNew && !passwordOld) {
-            return toast("Para alterar a senha, você precisa fornecer a sua senha atual.");
+            return toast("Para alterar a senha, você precisa fornecer a senha atual.");
         }
 
         if (passwordNew && passwordNew.length < 6) {
@@ -59,7 +59,7 @@ export function Profile() {
 
         const userUpdated = Object.assign(user, updated);
 
-        await updateProfile({ user: userUpdated, avatarFile, isAdminAccess, requestorder });
+        await updateProfile({ user: userUpdated, avatarFile, isAdmin, request });
     };
 
     function handleChangeAvatar(event) {
@@ -79,12 +79,12 @@ export function Profile() {
 
     return (
         <Container>
-            <GoBack />
+            <BackButton />
             <Form>
                 <label htmlFor="avatar">
                     <Avatar style={avatarStyle}>
                         {!avatar && <TfiUser />}
-                        <ChangeAvatar>Trocar imagem do Perfil</ChangeAvatar>
+                        <ChangeAvatar>Trocar imagem</ChangeAvatar>
                     </Avatar>
                     <input id="avatar" type="file" onChange={handleChangeAvatar} />
                 </label>
@@ -115,7 +115,9 @@ export function Profile() {
                 <Button onClick={handleUpdate}>Salvar</Button>
             </Form>
             <Footer />
-            <ToastContainer autoClose={1500} draggable={false} />
+            <Toaster />
         </Container>
     );
 }
+
+/*<ToastContainer autoClose={1500} draggable={false} />*/

@@ -7,34 +7,38 @@ import { api } from '../../services/api';
 import { TfiReceipt, TfiUser, TfiHeart } from 'react-icons/tfi';
 import { FiLogOut } from 'react-icons/fi';
 
-import defaultPlate from '../../../src/assets/plate.svg';
-import { Trademark }  from '../Trademark';
+import { Logo } from '../Logo';
 import { Input } from '../Input';
 import { Button } from '../Button';
 import { Menu } from '../Menu';
-import { ItemMenu } from '../ItemMenu';
+import { SelectMenu } from '../SelectMenu';
+import defaultFood from '../../assets/food.svg';
 
-import { Container, ReceiptRequestOrders, RequestOrder, Profile, ProfileMenu, ProfileMenuOptions, SearchList } from './styles';
+import toast from 'react-hot-toast';
+
+import { Container, ReceiptRequests, Request, Profile, ProfileMenu, ProfileMenuOptions, SearchList } from './styles';
 
 export function Header(props) {
-    const { signOut, user, isAdminAccess } = useAuth();
+    const { signOut, user, isAdmin } = useAuth();
 
     const navigate = useNavigate();
 
-    const { setItemSearch, page, requestOrderItems, totalRequestOrder } = props;
+    const { setItemSearch, page, requestItems, totalRequest } = props;
 
-    const [plates, setPlates] = useState([]);
-    const [totalQuantity, setTotalQuantity] = useState(0);
+    const [foods, setFoods] = useState([]);
+    const [totalAmount, setTotalAmount] = useState(0);
 
-    const avatarUrl = `${api.defaults.baseURL}/files/${user.avatar}`;
-    const avatarStyle = { backgroundImage: user.avatar ? `url(${avatarUrl})` : 'none' };
-
-    const querySizeWidth = 1050;
-    const [windowSizeWidth, setWindowSizeWidth] = useState(window.innerWidth);
+    // Verificação para garantir que user e avatar sejam definidos antes de acessar suas propriedades
+    const { avatar } = user ? user : {};
+    const avatarUrl = avatar ? `${api.defaults.baseURL}/files/${avatar}` : '';
+    const avatarStyle = { backgroundImage: avatar ? `url(${avatarUrl})` : 'none' };
+    
+    const queryWidth = 1050;
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [isProfileMenuVisible, setIsProfileMenuVisible] = useState(false);
 
     const [search, setSearch] = useState("");
-    const [hasSearchButton, setHasSearchButton] = useState(false);
+    const [hasSearchPlaceholder, setHasSearchPlaceholder] = useState(false);
     const [filteredSearch, setFilteredSearch] = useState([]);
 
     const profileMenuRef = useRef(null);
@@ -46,15 +50,15 @@ export function Header(props) {
         signOut();
     };
 
-    function handlePlate(id) {
+    function handleFood(id) {
         const pageNameAndId = window.location.pathname.split("/");
 
-        navigate(`/plate/${id}`);
+        navigate(`/food/${id}`);
 
-        if (pageNameAndId[1] === "plate" && pageNameAndId[2] !== id.toString()) {
+        if (pageNameAndId[1] === "food" && pageNameAndId[2] !== id.toString()) {
             window.location.reload();
         } else {
-            document.querySelector("#searchPlates").value = "";
+            document.querySelector("#searchFoods").value = "";
             setSearch("");
         };
     };
@@ -69,6 +73,7 @@ export function Header(props) {
 
     useEffect(() => {
         function handleClickOutside(event) {
+            // Fecha o menu de perfil quando clicar fora dele
             if (
                 profileMenuRef.current &&
                 !profileMenuRef.current.contains(event.target) &&
@@ -89,56 +94,54 @@ export function Header(props) {
     }, []);
 
     useEffect(() => {
-        setHasSearchButton(!search);
+        setHasSearchPlaceholder(!search);
     }, [search]);
-
+    
     useEffect(() => {
-        if (page === "home") {
-            setItemSearch(search);
-        };
+        setItemSearch(page === "home" ? search : "");
 
-        function filterPlatesByNameOrIngredient(searchQuery) {
+        function filterFoodsByNameOrIngredient(searchQuery) {
             searchQuery = searchQuery.toLowerCase();
 
-            var filteredPlates = plates.filter(function (plate) {
-                if (plate.name.toLowerCase().includes(searchQuery)) {
+            var filteredFoods = foods.filter(function (food) {
+                if (food.name.toLowerCase().includes(searchQuery)) {
                     return true;
                 };
 
-                var foundIngredient = plate.ingredients.find(function (ingredient) {
+                var foundIngredient = food.ingredients.find(function (ingredient) {
                     return ingredient.name.toLowerCase().includes(searchQuery);
                 });
 
                 return !!foundIngredient;
             });
 
-            return filteredPlates;
+            return filteredFoods;
         };
 
-        var searchResult = filterPlatesByNameOrIngredient(search);
+        var searchResult = filterFoodsByNameOrIngredient(search);
         setFilteredSearch(searchResult);
-    }, [search]);
+    }, [page, search]);
 
     useEffect(() => {
-        async function fetchPlates() {
+        async function fetchFoods() {
             try {
-                const response = await api.get("/plates");
-                setPlates(response.data);
+                const response = await api.get("/foods");
+                setFoods(response.data);
             } catch (error) {
-                console.error("Erro ao buscar pratos: ", error);
-                toast("Erro ao buscar os pratos, tente novamente.");
+                console.error("Aconteceu um erro ao buscar por pratos: ", error);
+                toast("Erro ao buscar por pratos. Por favor, tente novamente.");
             };
         };
 
-        fetchPlates();
+        fetchFoods();
 
-        function handleResize() {
-            setWindowSizeWidth(window.innerWidth);
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
 
-            if (window.innerWidth < querySizeWidth) {
+            if (window.innerWidth < queryWidth) {
                 setIsProfileMenuVisible(false);
                 setSearch("");
-            };
+            }
         };
 
         window.addEventListener('resize', handleResize);
@@ -149,33 +152,35 @@ export function Header(props) {
     }, []);
 
     useEffect(() => {
-        const oldItems = JSON.parse(localStorage.getItem("@foodexplorer:requestorder"));
+        const oldItems = JSON.parse(localStorage.getItem("@foodexplorer:request"));
 
-        if (oldItems && oldItems.plates) {
+        if (oldItems && oldItems.foods) {
             let total = 0;
 
-            for (const plate of oldItems.plates) {
-                if (plate.quantity) {
-                    total += plate.quantity;
+            for (const food of oldItems.foods) {
+                if (food.amount) {
+                    total += food.amount;
                 };
             };
-            setTotalQuantity(total);
+            setTotalAmount(total);
         } else {
-            setTotalQuantity(requestOrderItems);
+            setTotalAmount(requestItems);
         };
 
-    }, [requestOrderItems, totalRequestOrder]);
+    }, [requestItems, totalRequest]);
 
     return (
         <Container>
             <Menu />
-            <Link to="/"><Trademark  isAdminAccess={isAdminAccess} /> </Link>
-            {windowSizeWidth >= querySizeWidth && (
+            <Link to="/">
+                <Logo isAdmin={isAdmin} />
+            </Link>
+            {windowWidth >= queryWidth && (
                 <Input
-                    id="searchPlates"
+                    id="searchFoods"
                     type="text"
                     onChange={(e) => setSearch(e.target.value)}
-                    aria-label="Buscar por pratos ou Ingredientes"
+                    aria-label="Busque por pratos ou ingredientes"
                     searchPlaceholder={hasSearchPlaceholder}
                     value={search}
                 >
@@ -183,16 +188,16 @@ export function Header(props) {
                         search && filteredSearch.length > 0 && page !== "home" &&
                         <SearchList>
                             {
-                                filteredSearch.map(plate =>
-                                    <div key={plates.id} onClick={() => handlePlate(plate.id)}>
+                                filteredSearch.map(food =>
+                                    <div key={food.id} onClick={() => handleFood(food.id)}>
                                         {
-                                            plate.image ? (
-                                                <img src={`${api.defaults.baseURL}/files/${plate.image}`} />
+                                            food.image ? (
+                                                <img src={`${api.defaults.baseURL}/files/${food.image}`} />
                                             ) : (
-                                                <img src={defaultPlate} />
+                                                <img src={defaultFood} />
                                             )
                                         }
-                                        <span>{plate.name}</span>
+                                        <span>{food.name}</span>
                                     </div>
                                 )
                             }
@@ -200,37 +205,37 @@ export function Header(props) {
                     }
                     {
                         search && filteredSearch.length === 0 && page !== "home" &&
-                        <SearchList><span>Não foi encontrado nenhum resultado!</span></SearchList>
+                        <SearchList><span>Nenhum resultado foi encontrado!</span></SearchList>
                     }
                 </Input>
             )}
-            {windowSizeWidth >= querySizeWidth ? (
-                isAdminAccess ? (
+            {windowWidth >= queryWidth ? (
+                isAdmin ? (
                     <Link to="/add">
                         <Button>
                             Novo prato
                         </Button>
                     </Link>
                 ) : (
-                    <Link to="/requestPayment">
+                    <Link to="/payment">
                         <Button>
-                            <TfiReceipt />{`Pedido (${totalQuantity})`}
+                            <TfiReceipt />{`Pedido (${totalAmount})`}
                         </Button>
                     </Link>
                 )
             ) : (
-                isAdminAccess ? null : (
-                    <Link to="/requestPayment">
-                        <ReceiptRequestOrders>
+                isAdmin ? null : (
+                    <Link to="/payment">
+                        <ReceiptRequests>
                             <TfiReceipt />
-                            <RequestOrder>
-                                {totalQuantity}
-                            </RequestOrder>
-                        </ReceiptRequestOrders>
+                            <Request>
+                                {totalAmount}
+                            </Request>
+                        </ReceiptRequests>
                     </Link>
                 )
             )}
-            {windowSizeWidth >= querySizeWidth && (
+            {windowWidth >= queryWidth && (
                 <Profile
                     ref={profileRef}
                     style={avatarStyle}
@@ -246,17 +251,26 @@ export function Header(props) {
                 className={`profile-menu ${isProfileMenuVisible ? 'profile-menu-visible' : 'profile-menu-transition'}`}
             >
                 <ProfileMenuOptions>
-                    <Link to="/requestorders">
+                    <Link to="/requests">
                         {
-                            isAdminAccess ? <ItemMenu icon={TfiReceipt} title="Pedidos" /> : <ItemMenu icon={TfiReceipt} title="Meus pedidos" />
+                            isAdmin ? 
+                            <SelectMenu icon={TfiReceipt} title="Pedidos" /> 
+                            : <SelectMenu icon={TfiReceipt} title="Meus pedidos" />
                         }
                     </Link>
                     {
-                        !isAdminAccess &&
-                        <Link to="/preferences"><ItemMenu icon={TfiHeart} title="Preferidos" /></Link>
+                        !isAdmin &&
+                        <Link to="/favorites">
+                            <SelectMenu icon={TfiHeart} 
+                            title="Favoritos" />
+                        </Link>
                     }
-                    <Link to="/profile"><ItemMenu icon={TfiUser} title="Atualizar dados" /></Link>
-                    <ItemMenu
+                    
+                    <Link to="/profile">
+                        <SelectMenu icon={TfiUser} title="Atualizar dados" />
+                    </Link>
+                    
+                    <SelectMenu
                         icon={FiLogOut}
                         title="Sair"
                         onClick={handleSignOut}

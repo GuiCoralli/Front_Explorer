@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import banner from '../../assets/banner.png';
+
 
 export const Container = styled.div`
     width: 100%;
@@ -22,7 +22,7 @@ export const Content = styled.div`
     }
 `;
 
-export const Banner = styled.div`
+export const CoverPage = styled.div`
     display: flex;
     max-width: 100%;
     position: relative;
@@ -35,11 +35,11 @@ export const Banner = styled.div`
     }
 `;
 
-export const WrappedBanner = styled.div`
+export const BundleBanner = styled.div`
     max-width: 65.6rem;
     width: 100%;
     height: 42rem;
-    background-image: url(${banner});
+    background-image: url(${CoverPage});
     background-size: cover;
     position: relative;
     left: -6rem;
@@ -49,7 +49,7 @@ export const WrappedBanner = styled.div`
         max-width: 19.9rem;
         width: 100%;
         height: 14.9rem;
-        background-image: url(${banner});
+        background-image: url(${CoverPage});
         background-size: cover;
         position: relative;
         left: -3rem;
@@ -57,7 +57,7 @@ export const WrappedBanner = styled.div`
     }
 `;
 
-export const Slogan = styled.div`
+export const Quote = styled.div`
     min-width: 52rem;
     width: 100%;
     padding: 24.5rem 10rem 0 0;

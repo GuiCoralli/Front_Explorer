@@ -39,7 +39,7 @@ export const WrappedPreferences = styled.div`
     flex-wrap: wrap;
 `;
 
-export const PreferencePlate = styled.div`
+export const PreferenceFood = styled.div`
     min-width: 32rem;
     display: flex;
     align-items: center;
@@ -55,7 +55,7 @@ export const PreferencePlate = styled.div`
     }
 `;
 
-export const PlateInfo = styled.div`
+export const FoodInfo = styled.div`
     width: 100%;
 
     .disabled {

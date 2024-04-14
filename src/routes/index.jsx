@@ -1,59 +1,36 @@
-import { useState, useEffect } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { useAuth } from '../hooks/auth';
-import { api } from '../services/api';
+import { AuthProvider } from '../hooks/auth'; // Importa do AuthProvider
+import { useAuth } from '../hooks/auth'; // Importa o useAuth do hook
 
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { AdminRoutes } from '../routes/admin.routes';
+import { RegisterRoutes } from '../routes/register.routes';
+import { UsersRoutes } from '../routes/users.routes';
+import { AuthRoutes } from '../routes/auth.routes';
 
-import { AuthRoutes } from './auth.routes';
-import { AdminAccessRoutes } from './admin.access.routes';
-import { UserRoutes } from './user.routes';
-import { RegisterRoutes } from './register.routes';
-
-export function Routes() {
-    const { user, isAdminAccess } = useAuth();
-    const [adminAccessExists, setAdminAccessExists] = useState(false);
-
-    useEffect(() => {
-        async function checkIfAdminAccessExists() {
-            try {
-                const response = await api.get("/adminaccess");
-                if (response.data) {
-                    setAdminAccessExists(true);
-                } else {
-                    setAdminAccessExists(false);
-                };
-
-            }   catch (error) {
-                console.error("Erro ao verificar se o administrador existe:", error);
-
-                if (error.response && error.response.status === 404) {
-                    toast("Administrador não encontrado. Registre-se para obter acesso.");
-                } else {
-                    toast("Erro ao verificar se existe um administrador. Tente novamente.");
-                }
-            }
-        }
-
-        checkIfAdminAccessExists();
-    }, []);
-
-            
-                
-
-    return (
-        <BrowserRouter>
-            {adminAccessExists ? (
-                user ? (
-                    isAdminAccess ? <AdminAccessRoutes /> : <UserRoutes />
-                ) : (
-                    <AuthRoutes />
-                )
-            ) : (
-                <RegisterRoutes />
-            )}
-        </BrowserRouter>
-    );
+export function AppRoutes() {
+  const { user, isAdmin } = useAuth();
+  
+  return (
+    <BrowserRouter>
+      <Routes>
+        {/* Renderiza as rotas de acordo com a autenticação e o status de administrador */}
+        {isAdmin ? (
+          <Route
+            path="*"
+            element={user ? <AdminRoutes /> : <RegisterRoutes />}
+          />
+        ) : (
+          <>
+            <Route
+              path="*"
+              element={user ? <UsersRoutes /> : <AuthRoutes />}
+              />
+            <Route path="/register" element={<RegisterRoutes />} />
+          </>
+        )}
+      </Routes>
+    </BrowserRouter>
+  );
 }

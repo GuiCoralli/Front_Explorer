@@ -10,7 +10,7 @@
 
 
 <p align="justify">
-	Descubra o Food Explorer, uma aplicação web que reúne o melhor da culinária e programação. 
+	Food Explorer, uma aplicação web que reúne o melhor da culinária e programação. 
 	Este projeto final de curso da plataforma educacional <a href="https://app.rocketseat.com.br">Rocketseat</a> simula um cardápio digital para um restaurante. 
 	O Food Explorer é uma ótima experiência que converge de maneira criativa duas áreas distintas, como a gastronomia e a tecnologia.
 </p>

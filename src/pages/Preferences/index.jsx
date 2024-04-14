@@ -4,29 +4,30 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/auth';
 import { api } from '../../services/api';
 
-import defaultPlate from '../../../src/assets/plate.svg';
-import { GoBack } from '../../components/GoBack';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
+import { BackButton } from '../../components/BackButton';
 
-import { ConfirmationRequest } from '../../components/ConfirmationRequest';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import defaultFood from '../../assets/food.svg';
+import CoverPage from "../../assets/coverPage.png";
 
-import { Container, Content, WrappedPreferences, PreferencePlate, PlateInfo } from './styles';
+import { Toaster } from '../../components/Toaster';
+import { toast } from 'react-hot-toast';;  // Importa a biblioteca do Toaster do react-hot-toast
+
+import { Container, Content, WrappedPreferences, PreferenceFood, FoodInfo } from './styles';
 
 export function Preferences() {
 
     const { user } = useAuth();
 
-    const navigate = useNavigate();
+    const history = useNavigate();
 
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoadingFoods, setIsLoadingFoods] = useState(true);
     const [preferences, setPreferences] = useState([]);
     const [loadingPreferences, setLoadingPreferences] = useState(false);
 
-    function handlePlate(id) {
-        navigate(`/plate/${id}`)
+    function handleFood(id) {
+        history(`/food/${id}`)
     };
 
     async function handleRemove(id) {
@@ -35,8 +36,8 @@ export function Preferences() {
             const customId = "handleRemove";
 
             toast(
-                <ConfirmationRequest
-                    message={"Quer realmente remover dos preferidos?"}
+                <Toaster
+                    message={"Deseja realmente remover dos preferidos?"}
                     confirm={"Remover"}
                     cancel={"Cancelar"}
                     onConfirm={() => resolve(true)}
@@ -44,18 +45,19 @@ export function Preferences() {
                 />, {
                 toastId: customId,
                 containerId: "await"
-            });
+                }
+            );
         });
-
+        // Trabalha removendo um item, de comida, da Lista de preferidos do Usuário
         if (confirmed) {
             try {
                 setLoadingPreferences(true);
                 await api.delete(`/preferences/${id}`);
-                toast("Removido das Preferências.", { containerId: "autoClose" });
+                toast("Preferido foi removido.", { containerId: "autoClose" });
                 fetchPreferences();
             } catch (error) {
-                console.error("Erro ao remover das preferências: ", error);
-                toast("Erro ao remover o prato das preferências, tente novamente.");
+                console.error("Aconteceu um erro ao remover um item dos preferidos: ", error);
+                toast("Erro ao remover dos preferidos. Por favor, tente novamente.");
             } finally {
                 setLoadingPreferences(false);
             };
@@ -66,10 +68,10 @@ export function Preferences() {
         try {
             const response = await api.get(`/preferences/${user.id}`);
             setPreferences(response.data);
-            setIsLoading(false);
+            setLoadingPreferences(false);
         } catch (error) {
-            console.error("Não foi possível buscar pelas suas preferências: ", error);
-            toast("Não foi possível buscar as suas preferências, tente novamente.");
+            console.error("Aconteceu um erro ao e não foi possível buscar pelos preferidos: ", error);
+            toast("Não foi possível buscar pelos preferidos. Por favor, tente novamente.");
         };
     };
 
@@ -81,44 +83,45 @@ export function Preferences() {
         <Container>
             <Header />
             <Content>
-                <GoBack  />
-                <h1>Minhas Preferências</h1>
+                <BackButton />
+                <h1>Meus preferidos</h1>
                 {preferences.length > 0 ? (
                     <WrappedPreferences>
                         {
                             preferences.map(preference => (
-                                <PreferencePlate key={preference.id}>
+                                <PreferenceFood key={preference.id}>
                                     {
                                         preference.image ?
                                             <img
                                                 src={`${api.defaults.baseURL}/files/${preference.image}`}
                                                 alt={preference.name}
-                                                onClick={() => handlePlate(preference.plate_id)}
+                                                onClick={() => handleFood(preference.food_id)}
                                             /> :
-                                            <img src={defaultPlate}
+                                            <img src={defaultFood}
                                                 alt="Imagem padrão do prato"
-                                                onClick={() => handlePlate(preference.plate_id)}
+                                                onClick={() => handleFood(preference.food_id)}
                                             />
                                     }
-                                    <PlateInfo>
-                                        <h2 onClick={() => handlePlate(preference.plate_id)} >{preference.name}</h2>
+                                    <FoodInfo>
+                                        <h2 onClick={() => handleFood(preference.food_id)} >{preference.name}</h2>
                                         <span
                                             onClick={() => handleRemove(preference.id)}
                                             className={loadingPreferences ? "disabled" : ""}
-                                        > Remover dos favoritos</span>
-                                    </PlateInfo>
-                                </PreferencePlate>
+                                        >Remover dos preferidos</span>
+                                    </FoodInfo>
+                                </PreferenceFood>
                             ))
                         }
                     </WrappedPreferences>
                 ) : null}
-                {!isLoading && (
-                    preferences.length === 0 ? <p> Nenhum prato preferido foi adicionado.</p> : null
+                {!isLoadingFoods && (
+                    preferences.length === 0 ? 
+                    <p> Nenhuma comida preferida foi adicionada a sua lista.</p> 
+                    : null
                 )}
             </Content>
             <Footer />
-            <ToastContainer enableMultiContainer containerId={"await"} autoClose={false} draggable={false} />
-            <ToastContainer enableMultiContainer containerId={"autoClose"} autoClose={1500} draggable={false} />
-        </Container>
+            <Toaster />
+            </Container>
     );
 }
