@@ -1,13 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { AuthProvider } from '../hooks/auth'; // Importa do AuthProvider
 import { useAuth } from '../hooks/auth'; // Importa o useAuth do hook
 
-import { AdminRoutes } from '../routes/admin.routes';
-import { RegisterRoutes } from '../routes/register.routes';
-import { UsersRoutes } from '../routes/users.routes';
-import { AuthRoutes } from '../routes/auth.routes';
+import { AdminRoutes } from './admin.routes';
+import { RegisterRoutes } from './register.routes';
+import { UsersRoutes } from './users.routes';
+import { AuthRoutes } from './auth.routes';
 
 export function AppRoutes() {
   const { user, isAdmin } = useAuth();
