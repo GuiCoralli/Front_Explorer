@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 
 import { api } from '../../services/api';
@@ -8,10 +7,9 @@ import { Card } from '../../components/Card';
 import { Roundabout } from '../../components/Roundabout';
 import { Footer } from '../../components/Footer';
 
-
 import { Toaster, toast } from 'react-hot-toast';  // Importa a biblioteca do Toaster do react-hot-toast
 
-import {  Container,  Content,  CoverPage ,  BundleBanner,  Quote,  BgBanner,  NoResults} from './styles';
+import { Container, Content, CoverPage, BundleBanner, Quote, BgBanner, NoResults } from './styles';
 
 export function Home() {
   const [meals, setMeals] = useState([]);
@@ -39,46 +37,46 @@ export function Home() {
                 food={meal} 
                 setFoodToAdd={setFoodToAddToRequest} 
             />
-            )
-            );
+        ));
         setDesserts(dessertsArray.map(dessert => 
             <Card key={dessert.id} 
                 food={dessert} 
                 setFoodToAdd={setFoodToAddToRequest} 
             />
-            )
-            );
+        ));
         setDrinks(drinksArray.map(drink => 
             <Card key={drink.id} 
                 food={drink} 
                 setFoodToAdd={setFoodToAddToRequest} 
             />
-            )
-            );
-        } catch (error) {
-            console.error("Aconteceu um erro ao buscar os pratos:", error);
-            toast("Erro ao buscar os pratos. Por favor, tente novamente.");
-        } finally {
+        ));
+      } catch (error) {
+        console.error("Aconteceu um erro ao buscar os pratos:", error);
+        toast("Erro ao buscar os pratos. Por favor, tente novamente.");
+      } finally {
         setIsLoadingFoods(false);
-    }
+      }
     }
 
     fetchFoods();
-    }, [searchedItem]);
+  }, [searchedItem]);
 
-    useEffect(() => {
-        function filterFoodsByNameOrIngredient(query) {
-        query = query.toLowerCase();
+  useEffect(() => {
+    function filterFoodsByNameOrIngredient(query) {
+      if (typeof query !== 'string') {
+        query = '';
+      }
 
-        const filteredFoods = allFoods.filter(food =>
-            food.name.toLowerCase().includes(query) ||
-            food.ingredients.some(ingredient => ingredient.name.toLowerCase().includes(query))
-        );
-        return filteredFoods;
+      query = query.toLowerCase();
+
+      const filteredFoods = allFoods.filter(food =>
+        food.name.toLowerCase().includes(query) ||
+        food.ingredients.some(ingredient => ingredient.name.toLowerCase().includes(query))
+      );
+      return filteredFoods;
     }
 
     const filteredSearchResults = filterFoodsByNameOrIngredient(searchedItem);
-    setSearchedItem(filteredSearchResults);
 
     const updateRoundaboutItems = (category) => (
       filteredSearchResults
@@ -114,7 +112,7 @@ export function Home() {
       <Header setItemSearch={setSearchedItem} page="home" 
         foods={allFoods} 
         requestItems={requestItemsCount} 
-        />
+      />
       <Content>
         <CoverPage className="coverPage">
           <BundleBanner className="bundleBanner" />
@@ -125,29 +123,28 @@ export function Home() {
           <BgBanner className="bgBanner" />
         </CoverPage>
         {
-            meals.length > 0 && 
-            <Roundabout title="Refeições" 
+          meals.length > 0 && 
+          <Roundabout title="Refeições" 
             content={meals} 
-            />
+          />
         }
         {desserts.length > 0 && 
-            <Roundabout title="Sobremesas" 
+          <Roundabout title="Sobremesas" 
             content={desserts} 
-            />
+          />
         }
         {drinks.length > 0 && 
-            <Roundabout title="Bebidas" 
-             content={drinks} 
-            />
+          <Roundabout title="Bebidas" 
+            content={drinks} 
+          />
         }
         {searchedItem && 
-            meals.length <= 0 && 
-            desserts.length <= 0 && drinks.length <= 0 && (
+          meals.length <= 0 && 
+          desserts.length <= 0 && drinks.length <= 0 && (
             <NoResults>Nenhum resultado encontrado! </NoResults>
-        )
-        }
+        )}
         {!isLoadingFoods && allFoods.length <= 0 && 
-            <NoResults>Nenhum prato cadastrado!</NoResults>
+          <NoResults>Nenhum prato cadastrado!</NoResults>
         }
       </Content>
       <Footer />

@@ -29,10 +29,9 @@ export function Header(props) {
     const [totalAmount, setTotalAmount] = useState(0);
 
     // Verificação para garantir que user e avatar sejam definidos antes de acessar suas propriedades
-    const { avatar } = user ? user : {};
-    const avatarUrl = avatar ? `${api.defaults.baseURL}/files/${avatar}` : '';
-    const avatarStyle = { backgroundImage: avatar ? `url(${avatarUrl})` : 'none' };
-    
+    const avatarUrl = user && user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : '';
+    const avatarStyle = { backgroundImage: user && user.avatar ? `url(${avatarUrl})` : 'none' };
+
     const queryWidth = 1050;
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [isProfileMenuVisible, setIsProfileMenuVisible] = useState(false);
@@ -64,12 +63,8 @@ export function Header(props) {
     };
 
     function toggleProfileMenu() {
-        if (isProfileMenuVisible) {
-            setIsProfileMenuVisible(false);
-        } else {
-            setIsProfileMenuVisible(true);
-        };
-    };
+        setIsProfileMenuVisible(!isProfileMenuVisible);
+    }
 
     useEffect(() => {
         function handleClickOutside(event) {
@@ -242,7 +237,7 @@ export function Header(props) {
                     onClick={toggleProfileMenu}
                 >
                     {
-                        !user.avatar && <TfiUser />
+                       !user || !user.avatar && <TfiUser />
                     }
                 </Profile>
             )}

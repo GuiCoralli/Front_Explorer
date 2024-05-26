@@ -35,7 +35,7 @@ export default createGlobalStyle`
 
     body {
         background-color: ${( { theme }) => theme.COLORS.LIGHT_300};
-        font-family: ${(theme) => theme.FONTS.POPPINS_100};
+        font-family: ${({ theme }) => theme.FONTS?.POPPINS_100 || '"Roboto", sans-serif'};
         color: ${( {theme }) => theme.COLORS.LIGHT_100};
 
     }
@@ -50,7 +50,7 @@ export default createGlobalStyle`
     }
 
     button:hover, a:hover  {
-        filter: brightness(0.9);
+        filter: brightness(0.8);
     }
 
     #root {
